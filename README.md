@@ -2,7 +2,7 @@
 
 -------------------------------------------------------------------------------
 
-Daily programming training on the [LeetCode website]. (Https://leetcode.com/)
+Daily programming training on the [LeetCode website link](https://leetcode.com/). 
 
 The goal of the training is to practice C ++.
 
