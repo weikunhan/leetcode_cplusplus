@@ -9,8 +9,10 @@ public:
         int wakeTime = 0;
         //if (timeSeries.empty()) return 0;
         for (int i = 0; i < timeSeries.size(); i++) {
-            if (timeSeries[i] < wakeTime) res = res + (timeSeries[i] + duration - wakeTime);
-            else res = res + duration;
+            if (timeSeries[i] < wakeTime) 
+                res = res + (timeSeries[i] + duration - wakeTime);
+            else 
+	        res = res + duration;
 	    wakeTime = timeSeries[i] + duration;
         }
         return res;
