@@ -4,7 +4,7 @@
 // Tag: Array
 //==============================================================================
 // Summary:
-// In short, the sum of all number is fixed, to maximize the sum of smaller group, 
+// In short, the sum of all number is fixed. To maximize the sum of smaller group, 
 // you want to minimize the diff of the sum of 2 groups. And the best way to do 
 // that is to pair the numbers that are next to each other in sorted order.
 
