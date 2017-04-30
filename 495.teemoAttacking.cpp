@@ -12,7 +12,7 @@ public:
             if (timeSeries[i] < wakeTime) 
                 res = res + (timeSeries[i] + duration - wakeTime);
             else 
-	        res = res + duration;
+	        res += duration;
 	    wakeTime = timeSeries[i] + duration;
         }
         return res;
