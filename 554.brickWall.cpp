@@ -10,16 +10,18 @@
 class Solution {
 public:
     int leastBricks(vector<vector<int>>& wall) {
-        unordered_map<int, int> hash;
+        unordered_map<int, int> walls;
         int sameEdge = 0;
-        for (auto n : wall) {
+        
+        for (auto wall : walls) {
             int count = 0;
-            for (int i = 0; i < n.size() - 1; i++) {
-                count += n[i];
-                ++hash[count];
-                sameEdge = max(sameEdge, hash[count]);
+            for (int i = 0; i <wall.size() - 1; i++) {
+                count += wall[i];
+                ++walls[count];
+                sameEdge = max(sameEdge, walls[count]);
             }
         }
+        
         return wall.size() - sameEdge;
     }
 };
