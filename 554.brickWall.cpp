@@ -13,7 +13,7 @@ public:
         unordered_map<int, int> bricks;
         int sameEdge = 0;
         
-        for (auto brick:bricks) {
+        for (auto brick:wall) {
             int count = 0;
             for (int i = 0; i < brick.size() - 1; i++) {
                 count += brick[i];
