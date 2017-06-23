@@ -22,7 +22,8 @@ public:
             getline(ss, root, ' ');
             while (getline(ss, info, ' ')) {
                 string fileName = root + '/' + info.substr(0, info.find('('));
-                string fileContent = info.substr(info.find('(') + 1, info.find(')'));
+//                string fileContent = info.substr(info.find('(') +1, info.find(')') - info.find('(') - 1);
+                string fileContent = info.substr(info.find('('));
                 files[fileContent].push_back(fileName);
             }
         }
