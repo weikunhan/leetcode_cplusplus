@@ -7,6 +7,7 @@
 // The easy way is to use a hash table with key value are all files contents, 
 // and store files name with same key value. Finally, print all the size of mapped 
 // value is greate than 1, which prints the duplicates. 
+// https://leetcode.com/problems/find-duplicate-file-in-system/#/description
 
 class Solution {
 public:
