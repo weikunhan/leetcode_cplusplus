@@ -12,6 +12,7 @@
 // For example [9, 8, 7, 3, 2, 1, 6]. The stack will first contain 
 // [9, 8, 7, 3, 2, 1]. Then we see 6 which is greater than 1 so we pop 1 2 3 
 // whose next greater element should be 6.
+// https://leetcode.com/problems/next-greater-element-i/#/description
 
 class Solution {
 public:
