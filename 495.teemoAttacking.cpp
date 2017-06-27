@@ -3,6 +3,11 @@
 // C++
 // Tag: Array
 //==============================================================================
+// Summary:
+// The easy way is to use a hash table with key value are all files contents, 
+// and store files name with same key value. Finally, print all the size of mapped 
+// value is greate than 1, which prints the duplicates. 
+// https://leetcode.com/problems/teemo-attacking/#/description
 
 class Solution {
 public:
