@@ -1,3 +1,11 @@
+//==============================================================================
+// 1. Tow Sum
+// C++
+// Tag: Hash Table
+//==============================================================================
+// Summary:
+// https://leetcode.com/problems/add-two-numbers/#/description
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -10,7 +18,7 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode *res = new ListNode(0);
+        ListNode *res = new ListNode(NULL);
         ListNode *p = res;
         int carry = 0;
         
