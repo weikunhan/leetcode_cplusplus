@@ -1,7 +1,7 @@
 //==============================================================================
-// 1. Tow Sum
+// 2. Add Two Numbers
 // C++
-// Tag: Hash Table
+// Tag: Linked List
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/add-two-numbers/#/description
