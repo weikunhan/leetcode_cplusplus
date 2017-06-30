@@ -12,8 +12,8 @@ public:
         vector<int> mergeArray;
         double res;
         mergeArray.reserve(nums1.size() + nums2.size()); 
-		    mergeArray.insert(mergeArray.end(), nums2.begin(), nums2.end() );
-		    mergeArray.insert(mergeArray.end(), nums1.begin(), nums1.end() );
+	mergeArray.insert(mergeArray.end(), nums2.begin(), nums2.end() );
+	mergeArray.insert(mergeArray.end(), nums1.begin(), nums1.end() );
         sort(mergeArray.begin(), mergeArray.end());
         int median = mergeArray.size() / 2; 
         
