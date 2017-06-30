@@ -10,7 +10,7 @@ class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         vector<int> mergeArray;
-        double res;
+        double res = 0;
         mergeArray.reserve(nums1.size() + nums2.size()); 
 	mergeArray.insert(mergeArray.end(), nums2.begin(), nums2.end() );
 	mergeArray.insert(mergeArray.end(), nums1.begin(), nums1.end() );
