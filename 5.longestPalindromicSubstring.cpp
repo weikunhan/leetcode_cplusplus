@@ -13,7 +13,7 @@ public:
     	int position = 0;
         int maxLength = 0;
 
-    	if (s.length() == 0 || s.length() == 1) {
+    	if (s.length() <= 1) {
             return s;
         }
 	
