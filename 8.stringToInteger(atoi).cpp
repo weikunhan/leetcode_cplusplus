@@ -25,8 +25,7 @@ public:
                 if (isdigit(str[j])) {
                     res = res * 10 + (str[j] - 48);
                     if (res > INT_MAX || res < INT_MIN) {
-                        res = sign > 0 ? INT_MAX:INT_MIN;
-                        return res;
+                        return res = sign > 0 ? INT_MAX:INT_MIN;
                     }
                 } else {
                     break;
@@ -34,7 +33,6 @@ public:
             }
         }
         
-        res *= sign; 
-        return res;
+        return res *= sign;
     }
 };
