@@ -20,14 +20,14 @@ public:
 	for (int i = 0; i < s.length(); i++) { 
             int count1 = i;
             int count2 = i;
-            while(count1 < s.length() - 1 && s[count1] == s[count1 + 1]) {
+            while (count1 < s.length() - 1 && s[count1] == s[count1 + 1]) {
             	++count1;
             }
-	    while(count2 > 0 && count1 < s.length() - 1 && s[count2 - 1] == s[count1 + 1]){
+	    while (count2 > 0 && count1 < s.length() - 1 && s[count2 - 1] == s[count1 + 1]) {
             	++count1;
             	--count2;
             }
-            if(count1 - count2 + 1 > maxLength){
+            if (count1 - count2 + 1 > maxLength) {
 		maxLength = count1 - count2 + 1;
             	position = count2; 
             }
