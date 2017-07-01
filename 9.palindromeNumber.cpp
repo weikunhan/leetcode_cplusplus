@@ -12,6 +12,7 @@ public:
 	bool res = false;
 	int reverseInteger = 0; 
 	int originalInteger = x;
+	    
 	if (x < 0) {
 	    return res = false;
 	}
