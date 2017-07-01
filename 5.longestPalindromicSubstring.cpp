@@ -21,11 +21,11 @@ public:
             int j = i;
             int k = i;
             while (j < s.length() - 1 && s[j] == s[j + 1]) {
-            	++j;
+            	j++;
             }
 	    while (k > 0 && j < s.length() - 1 && s[k - 1] == s[j + 1]) {
-            	++j;
-            	--k;
+            	j++;
+            	k--;
             }
             if (j - k + 1 > maxLength) {
 		maxLength = j - k + 1;
