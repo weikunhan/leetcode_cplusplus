@@ -12,11 +12,11 @@ public:
 	string res;
     	int position = 0;
         int maxLength = 0;
-    
+
     	if (s.length() == 0 || s.length() == 1) {
            return s;
         }
-		
+	
 	for (int i = 0; i < s.length(); i++) { 
             int count1 = i;
             int count2 = i;
@@ -33,7 +33,7 @@ public:
             }
             res = s.substr(position, maxLength);
     	}
-    
+
    	return res;
     }
 };
