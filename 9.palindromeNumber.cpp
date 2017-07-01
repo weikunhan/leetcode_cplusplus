@@ -1,4 +1,3 @@
-
 //==============================================================================
 // 9. Palindrome Number
 // C++
@@ -9,13 +8,19 @@
 
 class Solution {
 public:
-	bool isPalindrome(int x) {
-		if (x < 0) return false;
-		int p1 = 0, p2 = x;
-		while (p2 > 0) {
-			p1 = p1*10 + p2%10;
-			p2 /= 10;
-		}
-		return p1 == x;
+    bool isPalindrome(int x) {
+	bool res = false;
+	int reverseInteger = 0; 
+	int originalInteger = x;
+	if (x < 0) {
+	    return res = false;
 	}
+	
+	while (originalInteger) {
+	    reverseInteger = reverseInteger * 10 + originalInteger % 10;
+	    originalInteger /= 10;
+	}
+	
+	return res = reverseInteger == x;
+    }
 };
