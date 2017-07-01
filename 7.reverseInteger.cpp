@@ -16,7 +16,7 @@ public:
             x /= 10;
         }
         
-        res = res < INT_MIN || res > INT_MAX ? 0 : res;
+        res = res < INT_MIN || res > INT_MAX ? 0:res;
         return res;
     }
 };
