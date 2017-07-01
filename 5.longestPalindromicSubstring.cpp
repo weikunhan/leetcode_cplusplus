@@ -23,7 +23,7 @@ public:
             while (j < s.length() - 1 && s[j] == s[j + 1]) {
             	++j;
             }
-	    while (k > 0 && k < s.length() - 1 && s[k - 1] == s[j + 1]) {
+	    while (k > 0 && j < s.length() - 1 && s[k - 1] == s[j + 1]) {
             	++j;
             	--k;
             }
