@@ -33,6 +33,6 @@ public:
             }
     	}
 
-   	return res = = s.substr(position, maxLength);
+   	return res = s.substr(position, maxLength);
     }
 };
