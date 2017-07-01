@@ -9,24 +9,13 @@
 
 class Solution {
 public:
-    bool isPalindrome(int x) {
-        bool res;
-        int sum = 0;
-        
-        if(x < 0 || (x != 0 && x % 10 == 0)) {
-            res = false;
-            return res;
-        }
- 
-        
-
-        
-        while(x> sum) {
-            sum = sum * 10 + x % 10;
-            x /= 10;
-        }
-
-        res = sum == x || x == sum / 10 ? true:false;
-        return res;
-    }
+	bool isPalindrome(int x) {
+		if (x < 0) return false;
+		int p1 = 0, p2 = x;
+		while (p2 > 0) {
+			p1 = p1*10 + p2%10;
+			p2 /= 10;
+		}
+		return p1 == x;
+	}
 };
