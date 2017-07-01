@@ -31,9 +31,8 @@ public:
 		maxLength = j - k + 1;
             	position = k; 
             }
-            res = s.substr(position, maxLength);
     	}
 
-   	return res;
+   	return res = = s.substr(position, maxLength);
     }
 };
