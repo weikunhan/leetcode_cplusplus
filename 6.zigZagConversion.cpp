@@ -16,11 +16,11 @@ public:
             return s;
         }
 
-        for(int i = 0; i < numRows; i++) {
-            for(int j = i; j < s.length(); j = j + cycle) {
+        for (int i = 0; i < numRows; i++) {
+            for (int j = i; j < s.length(); j = j + cycle) {
                 res += s[j];
                 int k = j - i + cycle - i;
-                if(i > 0 && i < numRows - 1 && k < s.length()) {
+                if (i > 0 && i < numRows - 1 && k < s.length()) {
                     res += s[k];
                 }
             }
