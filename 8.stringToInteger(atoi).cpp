@@ -26,6 +26,7 @@ public:
                     res = res * 10 + (str[j] - 48);
                     if (res > INT_MAX || res < INT_MIN) {
                         res = sign > 0 ? INT_MAX:INT_MIN;
+                        return res;
                     }
                 } else {
                     break;
