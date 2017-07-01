@@ -18,18 +18,18 @@ public:
         }
 	
 	for (int i = 0; i < s.length(); i++) { 
-            int count1 = i;
-            int count2 = i;
-            while (count1 < s.length() - 1 && s[count1] == s[count1 + 1]) {
-            	++count1;
+            int j = i;
+            int k = i;
+            while (j < s.length() - 1 && s[j] == s[j + 1]) {
+            	++j;
             }
-	    while (count2 > 0 && count1 < s.length() - 1 && s[count2 - 1] == s[count1 + 1]) {
-            	++count1;
-            	--count2;
+	    while (k > 0 && k < s.length() - 1 && s[k - 1] == s[k + 1]) {
+            	++j;
+            	--k;
             }
-            if (count1 - count2 + 1 > maxLength) {
-		maxLength = count1 - count2 + 1;
-            	position = count2; 
+            if (j - k + 1 > maxLength) {
+		maxLength = j - k + 1;
+            	position = k; 
             }
             res = s.substr(position, maxLength);
     	}
