@@ -13,7 +13,7 @@ public:
         int cycle = 2 * numRows - 2;
         
         if (numRows <= 1) {
-            return s;
+            return res = s;
         }
 
         for (int i = 0; i < numRows; i++) {
