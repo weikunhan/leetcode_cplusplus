@@ -14,7 +14,7 @@ public:
         int maxLength = 0;
 
     	if (s.length() == 0 || s.length() == 1) {
-           return s;
+            return s;
         }
 	
 	for (int i = 0; i < s.length(); i++) { 
