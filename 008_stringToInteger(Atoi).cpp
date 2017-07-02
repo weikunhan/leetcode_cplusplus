@@ -1,7 +1,7 @@
 //==============================================================================
 // 8. String to Integer (atoi)
 // C++
-// Tag: String
+// Tag: Math
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/string-to-integer-atoi/#/description
