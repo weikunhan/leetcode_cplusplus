@@ -16,10 +16,10 @@ public:
         while (i < j) {
             int newHeight = min(height[i], height[j]);
             res = max(res, (j - i) * newHeight);
-            while (height[i] <= newHeight && i < j) {
+            while (height[i] == newHeight && i < j) {
                 i++;
             }
-            while (height[j] <= newHeight && i < j) {
+            while (height[j] == newHeight && i < j) {
                 j--;
             }
         }
