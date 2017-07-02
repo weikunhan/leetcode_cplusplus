@@ -18,8 +18,8 @@ public:
                                            {'M', 1000}};
         int res = 0;
         
-        for(int i = 0; i < s.length() - 1; i++) { 
-            if(tables[s[i]] < tables[s[i + 1]]) {
+        for (int i = 0; i < s.length() - 1; i++) { 
+            if (tables[s[i]] < tables[s[i + 1]]) {
                 res -= tables[s[i]];
             } else {
                 res += tables[s[i]];
