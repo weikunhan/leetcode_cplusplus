@@ -27,10 +27,10 @@ public:
                     j++;
                 } else {
                     res.push_back(vector<int> {nums[i], nums[j], nums[k]});
-                    while (nums[j] == nums[j + 1]) {          
+                    while (j < nums.size() - 1 && nums[j] == nums[j + 1]) {          
                         j++;
                     }
-                    while (nums[k] == nums[k - 1]) {
+                    while (k > 0 && nums[k] == nums[k-1]) {
                         k--;
                     }
                     j++; 
