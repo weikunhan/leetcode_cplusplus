@@ -12,7 +12,7 @@ public:
         vector<vector<int>> res;
         sort(nums.begin(), nums.end());
     
-        for (int i = 0; i < nums.size(); i++) {
+        for (int i = 0; i < nums.size() - 1; i++) {
             int j = i + 1; 
             int k = nums.size() - 1;
             if (i > 0 && nums[i] == nums[i - 1]) {
