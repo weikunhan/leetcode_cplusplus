@@ -10,17 +10,17 @@ class Solution {
 public:
     int maxArea(vector<int>& height) {
         int res = 0;
-        int i = 0;
-        int j = height.size() -  1;
+        int left = 0;
+        int right = height.size() -  1;
         
-        while (i < j) {
-            int newHeight = min(height[i], height[j]);
-            res = max(res, (j - i) * newHeight);
-            while (height[i] == newHeight && i < j) {
-                i++;
+        while (left < right) {
+            int newHeight = min(height[left], height[right]);
+            res = max(res, (right - left) * newHeight);
+            while (height[left] == newHeight && left < right) {
+                left++;
             }
-            while (height[j] == newHeight && i < j) {
-                j--;
+            while (height[right] == newHeight && left < right) {
+                right--;
             }
         }
         
