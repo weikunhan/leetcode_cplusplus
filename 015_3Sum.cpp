@@ -29,7 +29,7 @@ public:
                     while (j < nums.size() - 1 && nums[j] == nums[j + 1]) {          
                         j++;
                     }
-                    while (k > 0 && nums[k] == nums[k-1]) {
+                    while (k > 0 && nums[k] == nums[k - 1]) {
                         k--;
                     }
                     j++; 
