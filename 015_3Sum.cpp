@@ -11,29 +11,33 @@ public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         vector<vector<int>> res;
         sort(nums.begin(), nums.end());
+        
+        if (nums.size() < 3) {
+            return res;
+        }
     
-        for (int i = 0; i < nums.size(); i++) {
-            int j = i + 1;
-            int k = nums.size() - 1;
+        for (int i = 0; i < nums.size() - 2; i++) {
+            int left = i + 1;
+            int right = nums.size() - 1;
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
-            while (j < k) {
-                int sum = nums[i] + nums [j] + nums[k];
+            while (left < right) {
+                int sum = nums[i] + nums [left] + nums[right];
                 if (sum > 0) {
-                    k--;
+                    right--;
                 } else if (sum < 0) {
-                    j++;
+                    left++;
                 } else {
-                    res.push_back(vector<int> {nums[i], nums[j], nums[k]});
-                    while (j < nums.size() - 1 && nums[j] == nums[j + 1]) {          
-                        j++;
+                    res.push_back(vector<int> {nums[i], nums[left], nums[right]});
+                    while (left < right && nums[left] == nums[left + 1]) {          
+                        left++;
                     }
-                    while (k > 0 && nums[k] == nums[k - 1]) {
-                        k--;
+                    while (left > right && nums[right] == nums[right - 1]) {
+                        right--;
                     }
-                    j++; 
-                    k--;
+                    left++; 
+                    right--;
                 }
             }
         }
