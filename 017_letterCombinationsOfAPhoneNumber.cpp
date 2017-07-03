@@ -17,7 +17,7 @@ public:
             return res = {};
         }
         
-        for (int i = 0 ; i < digits.size(); ++i) {
+        for (int i = 0 ; i < digits.length(); i++) {
 //            int number = digits[i] - 48;
             int number = digits[i] - '0';
             string candidate = letter[number];
@@ -28,7 +28,7 @@ public:
             if (candidate.empty()) {
                 continue;
             }
-            for (int j = 0; j < candidate.size(); j++) {
+            for (int j = 0; j < candidate.length(); j++) {
                 for (int k = 0; k < res.size(); k++) {
                     tmp.push_back(res[k] + candidate[j]);
                 }
