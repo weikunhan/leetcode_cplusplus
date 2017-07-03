@@ -22,8 +22,7 @@ public:
                 int sum = nums[i] + nums [j] + nums[k];
                 if (sum > 0) {
                     k--;
-                }
-                else if (sum < 0) {
+                } else if (sum < 0) {
                     j++;
                 } else {
                     res.push_back(vector<int> {nums[i], nums[j], nums[k]});
