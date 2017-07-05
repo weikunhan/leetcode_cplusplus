@@ -11,13 +11,13 @@ public:
     int lengthOfLongestSubstring(string s) {
         unordered_map<char, int> characters;
         int res = 0;
-        int position = 0;
+        int left = 0;
        	
         for (int i = 0; i < s.length(); i++) {
             if (characters.find(s[i]) != characters.end()) {
-                position = max(characters[s[i]] + 1, position);
+                left = max(characters[s[i]] + 1, left);
             }
-            res = max(res, i + 1 - position);
+            res = max(res, i + 1 - left);
             characters[s[i]] = i;
         }
         
