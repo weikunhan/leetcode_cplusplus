@@ -21,6 +21,5 @@ public:
         }
         
         return res = nums.size() - left;
-
     }
 };
