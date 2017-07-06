@@ -24,7 +24,6 @@ public:
             }
         }
 
-        
         return res = low;
     }
 };
