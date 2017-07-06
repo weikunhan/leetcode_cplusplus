@@ -13,7 +13,7 @@ public:
         int left = 0;
     
         for (int i = 1; i < nums.size(); i++) {
-            if(nums[i] == nums[i - 1]) {
+            if (nums[i] == nums[i - 1]) {
                 left++;
             } else {
                 nums[i - left] = nums[i];
