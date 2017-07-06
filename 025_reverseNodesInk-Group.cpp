@@ -25,11 +25,11 @@ public:
     }
     
 private: 
-    ListNode* helper(ListNode* head, ListNode* last) {
-        ListNode* prev = last;
+    ListNode* helper(ListNode* head, ListNode* tail) {
+        ListNode* prev = tail;
         ListNode* current = head;
         
-        while (current != last) {
+        while (current != tail) {
             ListNode* tmp = current -> next;
             current -> next = prev;
             prev = current;
