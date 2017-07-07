@@ -4,7 +4,7 @@
 // Tag: Array
 //==============================================================================
 // Summary:
-// https://leetcode.com/problems/jump-game/#/solutions
+// https://leetcode.com/problems/jump-game/#/description
 
 class Solution {
 public:
