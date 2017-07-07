@@ -10,14 +10,15 @@ class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
         vector<int> res;
-        int low = 0;
-        int high = nums.size() - 1;
-        int left = -1;
-        int right = -1;
         
         if (low > high) {
-            return res = {left, right};
+            return res = {-1, -1};
         }
+        
+        int low = 0;
+        int high = nums.size() - 1;
+        int left = 0;
+        int right = 0;
         
         while (low <= high) {
             int mid = (low + high) / 2;
@@ -36,7 +37,7 @@ public:
             left--;
         }
         
-        while(right < nums.size() && nums[right + 1] == target){
+        while(right < nums.size() - 2 && nums[right + 1] == target){
             right++;
         }
         
