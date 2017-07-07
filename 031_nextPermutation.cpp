@@ -21,7 +21,7 @@ public:
             return;
         } 
         
-        while (j >= 0 && nums[j] <= nums[i - 1]) {
+        while (j > 0 && nums[j] <= nums[i - 1]) {
             j--;
         }
         
