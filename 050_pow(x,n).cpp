@@ -19,20 +19,20 @@ public:
         }
         
     	if (n < 0) {
-    		exponent = -n;
-    		x = 1 / x;
+            exponent = -n;
+    	    x = 1 / x;
     	} else {
-    		exponent = n;
+    	    exponent = n;
     	}
         
-		while (exponent > 0) {
-			if (exponent & 1) {
-				res *= x;
+	while (exponent > 0) {
+	    if (exponent & 1) {
+	        res *= x;
             }
-			x *= x;
-			exponent >>= 1;
-		}
-        
-		return res;
+	    x *= x;
+            exponent >>= 1;
+	}
+	    
+	return res;
     }
 };
