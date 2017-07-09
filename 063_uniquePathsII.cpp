@@ -1,11 +1,10 @@
 //==============================================================================
 // 63. Unique Paths II
 // C++
-// Tag: Array
+// Tag: Array(DP)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/unique-paths-ii/#/description
-
 
 class Solution {
 public:
