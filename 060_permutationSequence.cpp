@@ -20,7 +20,7 @@ public:
     for(int i=1; i<=n; i++){
         numbers.push_back(to_string(i));
     }
-    // numbers = {1, 2, 3, 4}
+
     
     k--;
     
