@@ -14,7 +14,7 @@ public:
         sum *= i;
         factorial[i] = sum;
     }
-    // factorial[] = {1, 1, 2, 6, 24, ... n!}
+
     
     // create a list of numbers to get indices
     for(int i=1; i<=n; i++){
