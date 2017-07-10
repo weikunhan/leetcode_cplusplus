@@ -1,35 +1,30 @@
 class Solution {
 public:
     string getPermutation(int n, int k) {
-        int pos = 0;
-        vector<string> numbers;
+        vector<string> number;
         vector<int> factorial(n + 1);
+        factorial[0] = 1;
         string res;
- 
-
         int sum = 1;
-    factorial[0] = 1;
-    for(int i=1; i<=n; i++){
-        sum *= i;
-        factorial[i] = sum;
-    }
+        
+        for (int i = 1; i <= n; i++) {
+            sum *= i;
+            factorial[i] = sum;
+        }
 
-    
+        for(int i = 1; i <= n; i++) {
+            number.push_back(to_string(i));
+        }
 
-    for(int i=1; i<=n; i++){
-        numbers.push_back(to_string(i));
-    }
-
+        k--;
     
-    k--;
+        for(int i = 1; i <= n; i++){
+            int index = k / factorial[n - i];
+            res.append(numbers[index]);
+            numbers.erase(numbers.begin() + index);
+            k -= index * factorial[n-i];
+        }
     
-    for(int i = 1; i <= n; i++){
-        int index = k/factorial[n-i];
-        res.append(numbers[index]);
-        numbers.erase(numbers.begin() + index);
-        k-=index*factorial[n-i];
-    }
-    
-    return res; 
+        return res; 
     }
 };
