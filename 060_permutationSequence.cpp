@@ -5,8 +5,7 @@ public:
         vector<string> numbers;
         vector<int> factorial(n + 1);
         string sb;
-        stringstream ss;
-    
+ 
 
         int sum = 1;
     factorial[0] = 1;
