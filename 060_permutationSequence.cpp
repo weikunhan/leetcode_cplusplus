@@ -16,7 +16,7 @@ public:
     }
 
     
-    // create a list of numbers to get indices
+
     for(int i=1; i<=n; i++){
         numbers.push_back(to_string(i));
     }
