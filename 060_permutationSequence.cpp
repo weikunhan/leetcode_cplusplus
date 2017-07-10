@@ -1,3 +1,11 @@
+//==============================================================================
+// 60. Permutation Sequence
+// C++
+// Tag: Backtracking
+//==============================================================================
+// Summary:
+// https://leetcode.com/problems/permutation-sequence/#/description
+
 class Solution {
 public:
     string getPermutation(int n, int k) {
