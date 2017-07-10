@@ -9,14 +9,12 @@
 class Solution {
 public:
     double myPow(double x, int n) {
-    	double res = 0;
+    	double res = 1;
     	unsigned long long exponent = 0;
         
         if (n == 0) {
-            return res = 1;
-        } else {
-            res = 1;
-        }
+            return res;
+	}
         
     	if (n < 0) {
             exponent = -n;
