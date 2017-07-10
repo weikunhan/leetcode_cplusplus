@@ -7,7 +7,7 @@ public:
         string sb;
         stringstream ss;
     
-        // create an array of factorial lookup
+
         int sum = 1;
     factorial[0] = 1;
     for(int i=1; i<=n; i++){
