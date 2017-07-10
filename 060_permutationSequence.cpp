@@ -4,7 +4,7 @@ public:
         int pos = 0;
         vector<string> numbers;
         vector<int> factorial(n + 1);
-        string sb;
+        string res;
  
 
         int sum = 1;
@@ -25,11 +25,11 @@ public:
     
     for(int i = 1; i <= n; i++){
         int index = k/factorial[n-i];
-        sb.append(numbers[index]);
+        res.append(numbers[index]);
         numbers.erase(numbers.begin() + index);
         k-=index*factorial[n-i];
     }
     
-    return sb; 
+    return res; 
     }
 };
