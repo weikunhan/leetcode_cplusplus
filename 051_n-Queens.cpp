@@ -21,7 +21,6 @@ private:
     void helper(int numberIn, int rowIn, vector<string> solutionIn, vector<vector<string>> &result) {
         if (rowIn == numberIn) {
             result.push_back(solutionIn);
-            
             return;
         }
         
