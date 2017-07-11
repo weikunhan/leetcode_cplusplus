@@ -26,8 +26,8 @@ public:
         }
     
         for (int i = 2; i < n; i++) { 
-    	      res = f2 + f1;
-    	      f1 = f2;
+    	    res = f2 + f1;
+    	    f1 = f2;
             f2 = res;
         }
         
