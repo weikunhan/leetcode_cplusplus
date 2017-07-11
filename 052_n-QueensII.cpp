@@ -9,8 +9,8 @@
 class Solution {
 public:
     int totalNQueens(int n) {
-        int res = 0;
         vector<string> solution(n, string(n, '.'));
+        int res = 0;
         
         helper(n, 0, solution, res);
         
