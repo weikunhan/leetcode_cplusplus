@@ -1,7 +1,7 @@
 //==============================================================================
 // 60. Permutation Sequence
 // C++
-// Tag: Math(Backtracking)
+// Tag: Backtracking
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/permutation-sequence/#/description
