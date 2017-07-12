@@ -6,7 +6,6 @@
 // Summary:
 // https://leetcode.com/problems/group-anagrams/#/description
 
-
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
