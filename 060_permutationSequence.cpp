@@ -10,8 +10,7 @@ class Solution {
 public:
     string getPermutation(int n, int k) {
         vector<string> number;
-        vector<int> factorial(n + 1);
-        factorial[0] = 1;
+        vector<int> factorial(n + 1, 1);
         string res;
         int sum = 1;
         
