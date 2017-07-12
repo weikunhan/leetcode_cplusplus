@@ -27,7 +27,7 @@ public:
     
         for(int i = 1; i <= n; i++){
             int index = k / factorial[n - i];
-            res.append(number[index]);
+            res += number[index];
             number.erase(number.begin() + index);
             k -= index * factorial[n-i];
         }
