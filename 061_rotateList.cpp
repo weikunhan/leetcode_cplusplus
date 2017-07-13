@@ -28,13 +28,13 @@ public:
         
         while(left -> next) {
             left = left -> next;
-            length++;
+            ++length;
         }
         
         left -> next = head; 
 
         if (k %= length) {
-            for (int i = 0; i < length - k; i++) {
+            for (int i = 0; i < length - k; ++i) {
                 left = left -> next; 
             }
         }
