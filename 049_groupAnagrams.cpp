@@ -12,7 +12,7 @@ public:
         unordered_map<string, multiset<string>> words;
         vector<vector<string>> res;
         
-        for (int i = 0; i < strs.size(); i++) {
+        for (int i = 0; i < strs.size(); ++i) {
             string word = strs[i]; 
             sort(word.begin(), word.end());
             words[word].insert(strs[i]);
