@@ -19,28 +19,28 @@ class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
         ListNode *res;
-        ListNode *first = head;
-        int j = 1; 
+        ListNode *left = head;
+        int i = 1; 
         
         if(!head) {
             return res = head;
         }
         
-        while(first -> next) {
-            first = first -> next;
-            ++j;
+        while(left -> next) {
+            left = left -> next;
+            ++i;
         }
         
-        first -> next = head; 
+        left -> next = head; 
 
-        if (k %= length) {
-            for (int i = 0; i < j - k; ++i) {
-                first = first -> next; 
+        if (k %= i) {
+            for (int j = 0; j < i - k; ++j) {
+                left = left -> next; 
             }
         }
 
-        res = first -> next; 
-        first -> next = NULL;
+        res = left -> next; 
+        left -> next = NULL;
         
         return res;
     }
