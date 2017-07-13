@@ -14,22 +14,22 @@ public:
         string res;
         int sum = 1;
         
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; ++i) {
             sum *= i;
             factorial[i] = sum;
         }
 
-        for(int i = 1; i <= n; i++) {
-            number.push_back(to_string(i));
+        for(int i = 1; i <= n; ++i) {
+            number.push_back(string(1, i));
         }
 
-        k--;
+        --k;
     
-        for(int i = 1; i <= n; i++){
+        for(int i = 1; i <= n; ++i){
             int index = k / factorial[n - i];
             res += number[index];
             number.erase(number.begin() + index);
-            k -= index * factorial[n-i];
+            k -= index * factorial[n - i];
         }
     
         return res; 
