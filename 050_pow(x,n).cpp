@@ -24,7 +24,7 @@ public:
             high >>= 1;
             x *= x;
 	    if (high == mid) {
-	        return res = n < 0 ? 1 / res:res;
+	        return res = (n < 0) ? 1 / res:res;
             }
         }
     }  
