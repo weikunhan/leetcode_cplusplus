@@ -26,13 +26,13 @@ public:
             res.push_back(intervals[i++]);
         }
         
-        newInterval.start = i == intervals.size() ? newInterval.start:min(newInterval.start, intervals[i].start);
+        newInterval.start = (i == intervals.size()) ? newInterval.start:min(newInterval.start, intervals[i].start);
         
         while (i < intervals.size() && newInterval.end >= intervals[i].start) {
-            i++;
+            ++i;
         }
         
-        newInterval.end = i == 0 ? newInterval.end:max(intervals[i - 1].end, newInterval.end);
+        newInterval.end = (i == 0) ? newInterval.end:max(intervals[i - 1].end, newInterval.end);
         res.push_back(newInterval);
         
         while (i < intervals.size()) {
