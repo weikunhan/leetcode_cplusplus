@@ -16,21 +16,21 @@ public:
         int digit = 0;
         
         while (i < s.length() && isspace(s[i])) {
-            i++;
+            ++i;
         }
         
         if (i < s.length() && (s[i] == '+' || s[i] == '-')) {
-            i++;
+            ++i;
         }
         
         while (i < s.length() && (isdigit(s[i]) || s[i] == '.')) {
             if (isdigit(s[i])) {
-                digit++;
+                ++digit;
             }
             if (s[i] == '.') {
-                point++;
+                ++point;
             }
-            i++;
+            ++i;
             flag = true;
         }
         
@@ -39,19 +39,19 @@ public:
         }
         
         if (i < s.length() && s[i] == 'e') {
-            i++;
+            ++i;
             flag = false;
             if (i < s.length() && (s[i] == '+' || s[i] == '-')) {
-                i++;
+                ++i;
             }
             while (i < s.length() && isdigit(s[i])) {
-                i++;
+                ++i;
                 flag = true;
             }
         }
         
         while (i < s.length() && isspace(s[i])) {
-            i++;
+            ++i;
         }
         
         return res = flag && i == s.length();
