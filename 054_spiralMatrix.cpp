@@ -16,7 +16,7 @@ public:
         int rowBegin = 0;
         
         if (matrix.empty()) {
-            return res = {};
+            return res;
         } else {
             colEnd = matrix[0].size() - 1;
         }
