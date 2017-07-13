@@ -13,8 +13,8 @@ public:
         vector<int> sum(n, nums[0]);
         int res = sum[0];
         
-        for (int i = 1; i < n; i++) {
-            sum[i] = nums[i] + (sum[i - 1] > 0 ? sum[i - 1]:0);
+        for (int i = 1; i < n; ++i) {
+            sum[i] = nums[i] + ((sum[i - 1] > 0) ? sum[i - 1]:0);
             res = max(res, sum[i]);
         }
         
