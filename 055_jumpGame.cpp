@@ -12,7 +12,7 @@ public:
         bool res = false;
         int reachable = 0;
         
-        for (int i = 0; i < nums.size(); i++) {
+        for (int i = 0; i < nums.size(); ++i) {
             if (i > reachable) {
                 return res;
             }
