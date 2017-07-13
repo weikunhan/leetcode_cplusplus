@@ -17,22 +17,22 @@ public:
         int number = 1;
 
         while (rowBegin <= rowEnd && colBegin <= colEnd) {
-            for (int i = colBegin; i <= colEnd; i++) {
+            for (int i = colBegin; i <= colEnd; ++i) {
                 res[rowBegin][i] = number++;
             }
-            rowBegin++;
-            for (int i = rowBegin; i <= rowEnd; i++) {
+            ++rowBegin;
+            for (int i = rowBegin; i <= rowEnd; ++i) {
                 res[i][colEnd] = number++;
             }
-            colEnd--;
-            for (int i = colEnd; i >= colBegin; i--) {
+            --colEnd;
+            for (int i = colEnd; i >= colBegin; --i) {
                 res[rowEnd][i] = number++;
             }
-            rowEnd--;
-            for (int i = rowEnd; i >= rowBegin; i--) {
+            --rowEnd;
+            for (int i = rowEnd; i >= rowBegin; --i) {
                 res[i][colBegin] = number++;
             }
-            colBegin++;
+            ++colBegin;
         }
 
         return res;
