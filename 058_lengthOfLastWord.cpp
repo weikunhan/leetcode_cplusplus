@@ -12,13 +12,13 @@ public:
         int res = 0;
         int i = s.length() - 1;
         
-        while (i >= 0 && s[i] == ' ') {
-            i--;
+        while (i >= 0 && isspace(s[i])) {
+            --i;
         }
         
-        while (i >= 0 && s[i] != ' ') {
-            res++;
-            i--;
+        while (i >= 0 && !isspace(s[i])) {
+            ++res;
+            --i;
         }
         
         return res;
