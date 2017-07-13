@@ -19,7 +19,7 @@ public:
         }
         
         for (auto word:words) { 
-            vector<string> anagram = {word.second.begin(), word.second.end()};
+            vector<string> anagram(word.second.begin(), word.second.end());
             res.push_back(anagram);
         }
         
