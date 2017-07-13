@@ -15,8 +15,8 @@ public:
         int j = b.length() - 1;
         
         while (i >= 0 || j >= 0 || carry == 1) {
-            carry += (i >= 0) ? stoi(a[i--]):0;
-            carry += j >= 0 ? stoi(b[j--]):0;
+            carry += (i >= 0) ? a[i--] - '0':0;
+            carry += (j >= 0) ? b[j--] - '0':0;
             res = to_string(carry % 2) + res;
             carry /= 2;
         }
