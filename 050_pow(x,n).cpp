@@ -10,7 +10,7 @@ class Solution {
 public:
     double myPow(double x, int n) {
         double res = 1; 
-        unsigned int high = n >= 0 ? n:-n;
+        unsigned int high = (n >= 0) ? n:-n;
         int mid = 0;
         
         if (high == 0) {
