@@ -28,7 +28,7 @@ public:
             res.push_back(intervals[0]);
         }
     
-        for (int i = 1; i < intervals.size(); i++) {
+        for (int i = 1; i < intervals.size(); ++i) {
             if (res.back().end < intervals[i].start) {
                 res.push_back(intervals[i]);
             } else {
