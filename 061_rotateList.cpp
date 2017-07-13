@@ -1,7 +1,7 @@
 //==============================================================================
 // 61. Rotate List
 // C++
-// Tag: Linked List(2Pointers)
+// Tag: Linked List (2 Pointers)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/rotate-list/#/description
