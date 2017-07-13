@@ -23,7 +23,7 @@ public:
         sort(intervals.begin(), intervals.end(), helper);
         
         if (intervals.empty()) {
-            return res = {};
+            return res;
         } else {
             res.push_back(intervals[0]);
         }
