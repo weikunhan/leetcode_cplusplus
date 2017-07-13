@@ -22,26 +22,26 @@ public:
         }
 
         while (rowBegin <= rowEnd && colBegin <= colEnd) {
-            for (int i = colBegin; i <= colEnd; i++) {
+            for (int i = colBegin; i <= colEnd; ++i) {
                 res.push_back(matrix[rowBegin][i]);
             }
-            rowBegin++;
-            for (int i = rowBegin; i <= rowEnd; i++) {
+            ++rowBegin;
+            for (int i = rowBegin; i <= rowEnd; ++i) {
                 res.push_back(matrix[i][colEnd]);
             }
-            colEnd--;
+            --colEnd;
             if (rowBegin <= rowEnd) {
-                for (int i = colEnd; i >= colBegin; i--) {
+                for (int i = colEnd; i >= colBegin; --i) {
                     res.push_back(matrix[rowEnd][i]);
                 }
             }
-            rowEnd--;
+            --rowEnd;
             if (colBegin <= colEnd) {
-                for (int i = rowEnd; i >= rowBegin; i--) {
+                for (int i = rowEnd; i >= rowBegin; --i) {
                     res.push_back(matrix[i][colBegin]);
                 }
             }
-            colBegin++;
+            ++colBegin;
         }
         
         return res;
