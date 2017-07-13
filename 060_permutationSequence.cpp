@@ -20,7 +20,7 @@ public:
         }
 
         for(int i = 1; i <= n; ++i) {
-            number.push_back(string(1, i));
+            number.push_back(to_string(i));
         }
 
         --k;
