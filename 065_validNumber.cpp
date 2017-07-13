@@ -15,15 +15,15 @@ public:
         int point = 0;
         int digit = 0;
         
-        while (i < s.length() && isspace(s[i])) {
+        while (i < s.size() && isspace(s[i])) {
             ++i;
         }
         
-        if (i < s.length() && (s[i] == '+' || s[i] == '-')) {
+        if (i < s.size() && (s[i] == '+' || s[i] == '-')) {
             ++i;
         }
         
-        while (i < s.length() && (isdigit(s[i]) || s[i] == '.')) {
+        while (i < s.size() && (isdigit(s[i]) || s[i] == '.')) {
             if (isdigit(s[i])) {
                 ++digit;
             }
@@ -38,22 +38,22 @@ public:
             return res;
         }
         
-        if (i < s.length() && s[i] == 'e') {
+        if (i < s.size() && s[i] == 'e') {
             ++i;
             flag = false;
-            if (i < s.length() && (s[i] == '+' || s[i] == '-')) {
+            if (i < s.size() && (s[i] == '+' || s[i] == '-')) {
                 ++i;
             }
-            while (i < s.length() && isdigit(s[i])) {
+            while (i < s.size() && isdigit(s[i])) {
                 ++i;
                 flag = true;
             }
         }
         
-        while (i < s.length() && isspace(s[i])) {
+        while (i < s.size() && isspace(s[i])) {
             ++i;
         }
         
-        return res = flag && i == s.length();
+        return res = flag && i == s.size();
     }
 };
