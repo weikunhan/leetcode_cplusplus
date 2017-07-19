@@ -11,7 +11,7 @@ public:
 						F[i][j][k] = s1[i] == s2[j];
 					else 
                         for (int q = 1; q < k && !F[i][j][k]; ++q) {
-						F[i][j][k] = (F[i][j][q] && F[i + q][j + q][k - q]) || (F[i][j + k - q][q] && F[i + q][j][k - q]);
+					F[i][j][k] = (F[i][j][q] && F[i + q][j + q][k - q]) || (F[i][j + k - q][q] && F[i + q][j][k - q]);
 					}
                 }
             }
