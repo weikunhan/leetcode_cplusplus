@@ -1,3 +1,12 @@
+//==============================================================================
+// 86. Partition List
+// C++
+// Tag: Linked List(2 Pointers)
+//==============================================================================
+// Summary:
+// https://leetcode.com/problems/partition-list/#/description
+
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,6 +15,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+ 
 class Solution {
 public:
     ListNode* partition(ListNode* head, int x) {
