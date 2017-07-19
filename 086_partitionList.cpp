@@ -6,7 +6,6 @@
 // Summary:
 // https://leetcode.com/problems/partition-list/#/description
 
-
 /**
  * Definition for singly-linked list.
  * struct ListNode {
