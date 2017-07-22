@@ -23,14 +23,14 @@ public:
         stack<TreeNode *> nodes;
         TreeNode *current = root;
         
-        while(!stack.empty() || current) {
-            if(current) {
-                stack.push(current);
+        while (!nodes.empty() || current) {
+            if (current) {
+                nodes.push(current);
                 current = current->left;
             } else {
-                TreeNode *currentNode = stack.top();
-                vector.push_back(currentNode->val);
-                stack.pop();
+                TreeNode *currentNode = nodes.top();
+                res.push_back(currentNode->val);
+                nodes.pop();
                 current = currentNode->right;
             }
         }
