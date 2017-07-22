@@ -1,7 +1,7 @@
 //==============================================================================
 // 94. Binary Tree Inorder Traversal
 // C++
-// Tag: Stack
+// Tag: Stack, without Hash Table
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/binary-tree-inorder-traversal/#/description
