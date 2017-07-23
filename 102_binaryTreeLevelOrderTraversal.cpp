@@ -1,7 +1,7 @@
 //==============================================================================
 // 102. Binary Tree Level Order Traversal
 // C++
-// Tag: Tree(BSF)
+// Tag: Tree(BFS)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/binary-tree-level-order-traversal/#/description
