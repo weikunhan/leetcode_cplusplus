@@ -1,7 +1,7 @@
 //==============================================================================
 // 99. Recover Binary Search Tree
 // C++
-// Tag: Tree(DSF)
+// Tag: Tree(DFS)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/recover-binary-search-tree/#/description
