@@ -1,7 +1,7 @@
 //==============================================================================
 // 98. Validate Binary Search Tree
 // C++
-// Tag: Tree(DSF)
+// Tag: Tree(DFS)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/validate-binary-search-tree/#/description
