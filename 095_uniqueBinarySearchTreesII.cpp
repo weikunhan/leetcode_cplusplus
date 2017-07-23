@@ -29,17 +29,17 @@ public:
     }
     
 private:
-    vector<TreeNode *> helper(int startIn, int endIn) {
+    vector<TreeNode *> helper(int minIn, int maxIn) {
         vector<TreeNode *> tmp;
         
-        if (startIn > endIn) {
+        if (minIn > maxIn) {
             tmp.push_back(NULL);
             return tmp;
         }
         
-        for (int i = startIn; i <= endIn; ++i) {
-            vector<TreeNode*> leftSubTree = helper(startIn, i - 1);
-            vector<TreeNode*> rightSubTree = helper(i + 1, endIn);
+        for (int i = minIn; i <= maxIn; ++i) {
+            vector<TreeNode*> leftSubTree = helper(minIn, i - 1);
+            vector<TreeNode*> rightSubTree = helper(i + 1, maxIn);
             for (int j = 0; j < leftSubTree.size(); ++j) {
                 for (int k = 0; k < rightSubTree.size(); ++k) {
                     TreeNode *root = new TreeNode(i);
