@@ -38,8 +38,8 @@ private:
         }
         
         for (int i = minIn; i <= maxIn; ++i) {
-            vector<TreeNode*> leftSubTree = helper(minIn, i - 1);
-            vector<TreeNode*> rightSubTree = helper(i + 1, maxIn);
+            vector<TreeNode *> leftSubTree = helper(minIn, i - 1);
+            vector<TreeNode *> rightSubTree = helper(i + 1, maxIn);
             for (int j = 0; j < leftSubTree.size(); ++j) {
                 for (int k = 0; k < rightSubTree.size(); ++k) {
                     TreeNode *root = new TreeNode(i);
