@@ -25,24 +25,24 @@ public:
     }
 
 private:
-    TreeNode* helper(vector<int>& preorderIn, vector<int>& inorderIn, int preMinIn, int preMaxIn, int inMinIn, int inMaxIn) {
+    TreeNode* helper(vector<int>& preorderIn, vector<int>& inorderIn, int minIn1, int maxIn1, int minIn2, int maxIn2) {
         int index = 0;
         
-        if (preMinIn > preMaxIn) {
+        if (minIn1 > maxIn1) {
             return NULL;
         }
         
-        TreeNode* root = new TreeNode(preorderIn[preMinIn]);
+        TreeNode* root = new TreeNode(preorderIn[minIn1]);
     
-        for (int i = inMinIn; i <= inMaxIn; ++i) {
+        for (int i = minIn2; i <= maxIn2; ++i) {
             if (inorderIn[i] == root->val) {
                 index = i;
                 break;
             }
         }
     
-        root->left = helper(preorderIn, inorderIn, preMinIn + 1, preMinIn + index - inMinIn, inMinIn, index - 1);
-        root->right = helper(preorderIn, inorderIn, preMaxIn - inMaxIn + index + 1, preMaxIn, index + 1, inMaxIn);
+        root->left = helper(preorderIn, inorderIn, minIn1 + 1, minIn1 + index - minIn2, minIn2, index - 1);
+        root->right = helper(preorderIn, inorderIn, maxIn1 - maxIn2 + index + 1, maxIn1, index + 1, maxIn2);
         
         return root;
     }
