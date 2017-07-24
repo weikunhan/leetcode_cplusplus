@@ -21,28 +21,28 @@ public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
         TreeNode* res = NULL;
         
-        return res = helper(preorder, inorder, 0, preorder.size() - 1, 0, inorder.size() - 1);
+        return res = helper(0, preorder.size() - 1, 0, inorder.size() - 1, preorder, inorder);
     }
 
 private:
-    TreeNode* helper(vector<int>& preorderIn, vector<int>& inorderIn, int minIn1, int maxIn1, int minIn2, int maxIn2) {
+    TreeNode* helper(int minIn1, int maxIn1, int minIn2, int maxIn2, vector<int> &preorder, vector<int> &inorder) {
         int index = 0;
         
         if (minIn1 > maxIn1) {
             return NULL;
         }
         
-        TreeNode* root = new TreeNode(preorderIn[minIn1]);
+        TreeNode* root = new TreeNode(preorder[minIn1]);
     
         for (int i = minIn2; i <= maxIn2; ++i) {
-            if (inorderIn[i] == root->val) {
+            if (inorder[i] == root->val) {
                 index = i;
                 break;
             }
         }
     
-        root->left = helper(preorderIn, inorderIn, minIn1 + 1, minIn1 + index - minIn2, minIn2, index - 1);
-        root->right = helper(preorderIn, inorderIn, maxIn1 - maxIn2 + index + 1, maxIn1, index + 1, maxIn2);
+        root->left = helper(minIn1 + 1, minIn1 + index - minIn2, minIn2, index - 1, preorder, inorder);
+        root->right = helper(maxIn1 - maxIn2 + index + 1, maxIn1, index + 1, maxIn2, preorder, inorder);
         
         return root;
     }
