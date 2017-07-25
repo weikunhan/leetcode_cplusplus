@@ -30,10 +30,10 @@ public:
         }
 
         while (!nodes.empty()) {
-            int level = nodes.size();
+            int levelSize = nodes.size();
             vector<int> tmp(level);
-            for (int i = 0; i < level; ++i) {
-                int index = (flag) ? i:(level - 1 - i);
+            for (int i = 0; i < levelSize; ++i) {
+                int index = (flag) ? i:(levelSize - 1 - i);
                 if (nodes.front()->left) {
                     nodes.push(nodes.front()->left);
                 }
