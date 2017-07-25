@@ -45,6 +45,5 @@ private:
         root->right = helper(index + 1, maxIn1, maxIn2 - maxIn1 + index, maxIn2 - 1, inorder, postorder);
         
         return root;
-
     }
 };
