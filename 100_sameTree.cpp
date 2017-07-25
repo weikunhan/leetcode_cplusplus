@@ -25,7 +25,7 @@ public:
     }
     
 private:
-    bool helper(TreeNode* rootIn1, TreeNode* rootIn2) {
+    bool helper(TreeNode *rootIn1, TreeNode *rootIn2) {
         if (!rootIn1 || !rootIn2) {
             return rootIn1 == rootIn2;
         }
