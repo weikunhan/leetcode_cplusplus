@@ -1,7 +1,7 @@
 //==============================================================================
 // 101. Symmetric Tree
 // C++
-// Tag: Tree(DFS)
+// Tag: Tree(DFS, without BFS)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/symmetric-tree/#/description
