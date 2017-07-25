@@ -19,7 +19,7 @@
 class Solution {
 public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        TreeNode* res = NULL;
+        TreeNode *res = NULL;
         
         return res = helper(0, preorder.size() - 1, 0, inorder.size() - 1, preorder, inorder);
     }
@@ -32,7 +32,7 @@ private:
             return NULL;
         }
         
-        TreeNode* root = new TreeNode(preorder[minIn1]);
+        TreeNode *root = new TreeNode(preorder[minIn1]);
     
         for (int i = minIn2; i <= maxIn2; ++i) {
             if (inorder[i] == root->val) {
