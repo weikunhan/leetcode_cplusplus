@@ -25,7 +25,7 @@ public:
     }
 
 private:
-    bool helper(TreeNode* rootIn, TreeNode* minIn, TreeNode* maxIn) {
+    bool helper(TreeNode *rootIn, TreeNode *minIn, TreeNode *maxIn) {
         if (!rootIn) {
             return true;
         }
