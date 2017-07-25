@@ -29,9 +29,9 @@ public:
         }
         
         while (!nodes.empty()) {
-            int level = nodes.size();
+            int levelSize = nodes.size();
             vector<int> tmp;
-            for (int i = 0; i < level; ++i) {
+            for (int i = 0; i < levelSize; ++i) {
                 if (nodes.front()->left) {
                     nodes.push(nodes.front()->left);
                 }
