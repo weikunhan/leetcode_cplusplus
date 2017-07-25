@@ -19,13 +19,13 @@ public:
     }
     
 private:
-    void helper(int startIn, vector<int> solutionIn, vector<int> numbersIn, vector<vector<int>> &res) {
+    void helper(int startIn, vector<int> solutionIn, vector<int> numberIn, vector<vector<int>> &res) {
         res.push_back(solutionIn);
         
-        for (int i = startIn; i < numbersIn.size(); ++i) {
-            if (i == startIn || numbersIn[i] != numbersIn[i - 1]) {
-                solutionIn.push_back(numbersIn[i]);
-                helper(i + 1, solutionIn, numbersIn, res);
+        for (int i = startIn; i < numberIn.size(); ++i) {
+            if (i == startIn || numberIn[i] != numberIn[i - 1]) {
+                solutionIn.push_back(numberIn[i]);
+                helper(i + 1, solutionIn, numberIn, res);
                 solutionIn.pop_back();
             }
         }
