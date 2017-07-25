@@ -25,9 +25,9 @@ public:
         
         if (!root) {
             return res;
+        } else {
+            nodes.push(root);
         }
-
-        nodes.push(root);
 
         while (!nodes.empty()) {
             int level = nodes.size();
