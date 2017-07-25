@@ -19,7 +19,7 @@
 class Solution {
 public:
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
-        TreeNode* res = NULL;
+        TreeNode *res = NULL;
         
         return res = helper(0, inorder.size() - 1, 0, postorder.size() - 1, inorder, postorder);
     }
