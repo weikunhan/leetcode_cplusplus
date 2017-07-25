@@ -31,7 +31,7 @@ private:
         }
         
         int index = (minIn + maxIn) / 2;
-        TreeNode* root = new TreeNode(number[index]);
+        TreeNode *root = new TreeNode(number[index]);
         root->left = helper(minIn, index - 1, number);
         root->right = helper(index + 1, maxIn, number);
         
