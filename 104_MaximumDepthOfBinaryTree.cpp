@@ -25,7 +25,7 @@ public:
     }
     
 private:
-    int helper(TreeNode* rootIn) {
+    int helper(TreeNode *rootIn) {
         if (!rootIn) {
             return 0;
         }
