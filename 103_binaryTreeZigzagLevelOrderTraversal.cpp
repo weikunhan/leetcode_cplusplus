@@ -31,7 +31,7 @@ public:
 
         while (!nodes.empty()) {
             int levelSize = nodes.size();
-            vector<int> tmp(level);
+            vector<int> tmp(levelSize);
             for (int i = 0; i < levelSize; ++i) {
                 int index = (flag) ? i:(levelSize - 1 - i);
                 if (nodes.front()->left) {
