@@ -17,9 +17,9 @@
  */
 
 class Solution {
-    TreeNode* mistake1 = NULL;
-    TreeNode* mistake2 = NULL;
-    TreeNode* lastRoot = new TreeNode(INT_MIN);
+    TreeNode *mistake1 = NULL;
+    TreeNode *mistake2 = NULL;
+    TreeNode *lastRoot = new TreeNode(INT_MIN);
     
 public:
     void recoverTree(TreeNode* root) {
