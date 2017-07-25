@@ -32,7 +32,7 @@ private:
             return NULL;
         }
         
-        TreeNode* root = new TreeNode(postorder[maxIn2]);
+        TreeNode *root = new TreeNode(postorder[maxIn2]);
     
         for (int i = minIn1; i <= maxIn1; ++i) {
             if (inorder[i] == root->val) {
