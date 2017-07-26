@@ -42,8 +42,5 @@ private:
         }
         
         current->right = right;
-        
-
     }
-
 };
