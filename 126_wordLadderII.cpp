@@ -22,6 +22,7 @@ public:
         
         return res;
     }
+	
 private:
     bool helper(bool flagIn, 
                 unordered_set<string> startWordsIn, 
