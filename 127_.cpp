@@ -27,30 +27,30 @@ private:
                unordered_set<string> lastWordsIn,
                unordered_set<string> wordDictsIn, 
                int levelIn) {
-		unordered_set<string> intermediates;
+        unordered_set<string> intermediates;
         
         if (startWordsIn.empty()) {
             return 0;
         }
         
-		if (startWordsIn.size() > lastWordsIn.size()) {
-			return helper(lastWordsIn, startWordsIn, wordDictsIn, levelIn);
+	if (startWordsIn.size() > lastWordsIn.size()) {
+	    return helper(lastWordsIn, startWordsIn, wordDictsIn, levelIn);
         }
 
         for (auto word:startWordsIn) {
-			string tmp = word;
-			for (int i = 0; i < word.size(); ++i) {
-				char letter = word[i];
+	    string tmp = word;
+	    for (int i = 0; i < word.size(); ++i) {
+	        char letter = word[i];
                 for (int j = 0; j < 26; ++j) {
                     word[i] = 'a' + j;
-						if (lastWordsIn.find(word) != lastWordsIn.end()) {
-                            return levelIn + 1;
-                        } else if (wordDictsIn.find(word) != wordDictsIn.end()) {
-                            wordDictsIn.erase(word);
-                            intermediates.insert(word);
-                        }
+	            if (lastWordsIn.find(word) != lastWordsIn.end()) {
+                        return levelIn + 1;
+                    } else if (wordDictsIn.find(word) != wordDictsIn.end()) {
+                        wordDictsIn.erase(word);
+                        intermediates.insert(word);
+                    }
                 }
-				word[i] = letter;
+		word[i] = letter;
             }
         }
         
