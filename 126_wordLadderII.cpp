@@ -14,7 +14,7 @@ public:
         unordered_set<string> startWords;
         unordered_set<string> lastWords;
         unordered_set<string> wordDicts(wordList.begin(), wordList.end());
-        unordered_map<string, vector<string> > tables;
+        unordered_map<string, vector<string>> tables;
         
         if (wordDicts.find(endWord) == wordDicts.end()) {
             return res;
