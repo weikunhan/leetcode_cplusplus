@@ -6,7 +6,6 @@
 // Summary:
 // https://leetcode.com/problems/word-ladder/description/
 
-
 class Solution {
 public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
