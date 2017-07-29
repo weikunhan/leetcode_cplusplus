@@ -67,8 +67,7 @@ private:
                     if (lastWordsIn.find(word) != lastWordsIn.end()) {
                         flag = true;
 			(flagIn) ? tables[word].push_back(tmp):tables[tmp].push_back(word);
-                    }
-                    else if (!flag && wordDictsIn.find(word) != wordDictsIn.end()) {
+                    } else if (!flag && wordDictsIn.find(word) != wordDictsIn.end()) {
                         intermediates.insert(word);
 			(flagIn) ? tables[word].push_back(tmp):tables[tmp].push_back(word);
                     }
