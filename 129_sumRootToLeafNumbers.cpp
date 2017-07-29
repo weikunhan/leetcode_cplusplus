@@ -29,19 +29,19 @@ public:
     }
 
 private:
-    int helper(TreeNode *root, int numberIn) {
+    int helper(TreeNode *rootIn, int numberIn) {
         int tmp = 0;
         
-        if (!root->right && !root->left) {
-            return 10 * numberIn + root->val;
+        if (!rootIn->right && !rootIn->left) {
+            return 10 * numberIn + rootIn->val;
         }
 
-        if (root->left) {
-            tmp += helper(root->left, 10 * numberIn + root->val);
+        if (rootIn->left) {
+            tmp += helper(rootIn->left, 10 * numberIn + rootIn->val);
         }
         
-        if (root->right) {
-            tmp += helper(root->right, 10 * numberIn + root->val);
+        if (rootIn->right) {
+            tmp += helper(rootIn->right, 10 * numberIn + rootIn->val);
         }
         
         return tmp;
