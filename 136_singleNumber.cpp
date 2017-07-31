@@ -13,9 +13,9 @@ public:
         int firstState = 0; 
         
         for (int i = 0; i < nums.size(); ++i) {
-		        firstState = firstState ^ nums[i];
+	    firstState = firstState ^ nums[i];
         }
-        
-	      return result = firstState;
+       
+	return result = firstState;
     }
 };
