@@ -1,7 +1,7 @@
 //==============================================================================
 // 137. Single Number II
 // C++
-// Tag: Array
+// Tag: Bit Manipulation
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/single-number-ii/description/
