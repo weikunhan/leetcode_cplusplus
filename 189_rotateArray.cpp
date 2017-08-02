@@ -1,7 +1,7 @@
 //==============================================================================
 // 189. Rotate Array
 // C++
-// Tag: Backtracking
+// Tag: Array
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/rotate-array/description/
