@@ -1,7 +1,7 @@
 //==============================================================================
 // 136. Single Number
 // C++
-// Tag: Array, without Hash Table
+// Tag: Bit Manipulation, without Hash Table
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/single-number/description/
