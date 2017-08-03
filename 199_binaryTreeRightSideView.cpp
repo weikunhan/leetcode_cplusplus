@@ -1,7 +1,7 @@
 //==============================================================================
 // 199. Binary Tree Right Side View
 // C++
-// Tag: Tree(DFS)
+// Tag: Tree(DFS, without BFS)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/binary-tree-right-side-view/description/
