@@ -28,11 +28,11 @@ public:
     
 private:
     void helper(TreeNode *rootIn, int maxIn, vector<int> &res) {
-        if(!rootIn) {
+        if (!rootIn) {
             return;
         }
         
-        if(maxIn > res.size()) {
+        if (maxIn > res.size()) {
             res.push_back(rootIn->val);
         }
         
