@@ -1,7 +1,7 @@
 //==============================================================================
 // 200. Number of Islands
 // C++
-// Tag: Array(BFS)
+// Tag: Array(BFS, without DFS)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/number-of-islands/description/
