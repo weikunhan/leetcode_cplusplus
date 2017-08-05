@@ -19,7 +19,7 @@ public:
             if (tables1.find(sKey) != tables1.end() && tables1[sKey] != tKey) {
                 return res;
             }
-            if(tables2.find(tKey) != tables2.end() && tables2[tKey] != sKey) {
+            if (tables2.find(tKey) != tables2.end() && tables2[tKey] != sKey) {
                 return res;
             }
             tables1[sKey] = tKey;
