@@ -1,7 +1,7 @@
 //==============================================================================
 // 203. Remove Linked List Elements
 // C++
-// Tag: Math(Hash Table)
+// Tag: Linked list
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/remove-linked-list-elements/description/
