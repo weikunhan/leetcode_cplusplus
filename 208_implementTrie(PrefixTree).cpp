@@ -9,8 +9,13 @@
 class Trie {
 public:
     struct TrieNode {
-        bool isWord = false;
+        bool isWord;
         TrieNode *next[26];
+        TrieNode():isWord(false) {
+            for (auto &n:next) {
+                n = NULL;
+            }
+        }
         ~TrieNode() {
             for (auto n : next) {
                 if (n) { 
