@@ -13,7 +13,7 @@ public:
         vector<int> degree(numCourses);
         bool res = false;
 
-        for (int i = 0; i< prerequisites.size(); ++i) {
+        for (int i = 0; i < prerequisites.size(); ++i) {
             graph[prerequisites[i].second].insert(prerequisites[i].first);
         }
 
