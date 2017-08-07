@@ -10,14 +10,12 @@ class Trie {
 public:
     struct TrieNode {
         bool isWord;
-        TrieNode *next[26];
+        TrieNode *child[26];
         TrieNode():isWord(false) {
-            for (auto &n:next) {
-                n = NULL;
-            }
+            memset(child, NULL, sizeof(TrieNode *) * 26);
         }
         ~TrieNode() {
-            for (auto n : next) {
+            for (auto n:child) {
                 if (n) { 
                     delete n;
                 }
@@ -39,10 +37,10 @@ public:
         TrieNode *tmp = root;
         
         for (int i = 0; i < word.size(); ++i) {
-            if (!tmp->next[word[i] - 'a']) {
-                tmp->next[word[i] - 'a'] = new TrieNode();
+            if (!tmp->child[word[i] - 'a']) {
+                tmp->child[word[i] - 'a'] = new TrieNode();
             }
-            tmp = tmp->next[word[i] - 'a'];
+            tmp = tmp->child[word[i] - 'a'];
         }
         
         tmp->isWord = true;
@@ -69,8 +67,8 @@ private:
         TrieNode *tmp = root;
         
         for (int i = 0; i < wordIn.size(); ++i) {
-            if (tmp->next[wordIn[i] - 'a']) {
-                tmp = tmp->next[wordIn[i] - 'a'];
+            if (tmp->child[wordIn[i] - 'a']) {
+                tmp = tmp->child[wordIn[i] - 'a'];
             } else {
                 tmp = NULL;
                 break;
