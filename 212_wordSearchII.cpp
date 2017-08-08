@@ -61,19 +61,19 @@ private:
         
         boardIn[stepIn1][stepIn2] = '#';
         
-        if(stepIn1 > 0) {
+        if (stepIn1 > 0) {
             helper(boardIn, stepIn1 - 1, stepIn2 , rootIn, res); 
         }
         
-        if(stepIn2 > 0) {
+        if (stepIn2 > 0) {
             helper(boardIn, stepIn1, stepIn2 - 1, rootIn, res);
         }
         
-        if(stepIn1 < boardIn.size() - 1) {
+        if (stepIn1 < boardIn.size() - 1) {
             helper(boardIn, stepIn1 + 1, stepIn2, rootIn, res); 
         }
         
-        if(stepIn2 < boardIn[0].size() - 1) {
+        if (stepIn2 < boardIn[0].size() - 1) {
             helper(boardIn, stepIn1, stepIn2 + 1, rootIn, res); 
         }
         
