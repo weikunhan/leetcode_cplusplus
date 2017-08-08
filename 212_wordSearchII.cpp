@@ -20,7 +20,7 @@ public:
         for (int i = 0; i <wordIn.size(); ++i) {
             TrieNode* tmp = root;
             for (int j = 0; j < wordIn[i].size(); ++j) {
-                if (tmp->child[wordIn[i][j] - 'a'] == NULL) {
+                if (!tmp->child[wordIn[i][j] - 'a']) {
                     tmp->child[wordIn[i][j] - 'a'] = new TrieNode();
                 }
                 tmp = tmp->child[wordIn[i][j] - 'a'];
