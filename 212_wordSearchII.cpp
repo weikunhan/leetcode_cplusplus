@@ -73,7 +73,7 @@ private:
             helper(boardIn, stepIn1 + 1, stepIn2, rootIn, res); 
         }
         
-        if (stepIn2 < boardIn[0].size() - 1) {
+        if (stepIn2 < boardIn[stepIn1].size() - 1) {
             helper(boardIn, stepIn1, stepIn2 + 1, rootIn, res); 
         }
         
