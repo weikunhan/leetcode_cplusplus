@@ -1,7 +1,7 @@
 //==============================================================================
 // 217. Contains Duplicate
 // C++
-// Tag: Array(withour Hash Table)
+// Tag: Array(without Hash Table)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/contains-duplicate/description/
