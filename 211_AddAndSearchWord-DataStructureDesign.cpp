@@ -10,16 +10,10 @@ class WordDictionary {
 public:
     struct TrieNode {
         bool isWord;
-        TrieNode *child[26];
-        TrieNode():isWord(false) {
-            memset(child, NULL, sizeof(TrieNode *) * 26);
-        }
+        vector<TrieNode *> child;
+        TrieNode():isWord(false), child(26, NULL) {}
         ~TrieNode() {
-            for (auto n:child) {
-                if (n) { 
-                    delete n;
-                }
-            }
+           child.clear();
         }
     };
     
