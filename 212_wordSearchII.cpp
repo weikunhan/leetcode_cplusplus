@@ -11,7 +11,7 @@ public:
     struct TrieNode {
         vector<TrieNode *> child;
         string word;
-        TrieNode():word(""), child(26, nullptr) {}
+        TrieNode():word(""), child(26, NULL) {}
     };
     
     TrieNode* buildTrie(vector<string> wordIn) {
