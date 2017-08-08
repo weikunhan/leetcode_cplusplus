@@ -25,15 +25,27 @@ public:
     
 private:
     void helper(int stepIn1, int stepIn2, vector<vector<char>> &grid) {
-        if (stepIn1 < 0 || stepIn2 < 0 || stepIn1 >= grid.size() || stepIn2 >= grid[stepIn1].size() || grid[stepIn1][stepIn2] == '0') {
+        if (grid[stepIn1][stepIn2] == '0') {
             return;
         }
         
         grid[stepIn1][stepIn2] = '0';
-        helper(stepIn1 + 1, stepIn2, grid);
-        helper(stepIn1 - 1, stepIn2, grid);
-        helper(stepIn1, stepIn2 + 1, grid);
-        helper(stepIn1, stepIn2 - 1, grid);
+        
+        if (stepIn1 < grid.size() - 1) {
+            helper(stepIn1 + 1, stepIn2, grid);
+        }
+        
+        if (stepIn1 > 0) {
+            helper(stepIn1 - 1, stepIn2, grid);
+        }
+        
+        if (stepIn2 < grid[stepIn1].size() - 1) {
+            helper(stepIn1, stepIn2 + 1, grid);
+        }
+        
+        if (stepIn2 > 0) {
+            helper(stepIn1, stepIn2 - 1, grid);
+        }
         
         return;
     }
