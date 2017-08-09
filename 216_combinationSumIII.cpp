@@ -19,15 +19,15 @@ public:
 
 private:
     void helper(int sumIn, int endIn, int startIn, vector<int> solutionIn, vector<vector<int>> &res) {
-	      if (solutionIn.size() == endIn && sumIn == 0) {
-		        res.push_back(solutionIn);
-		        return;
-	      }
+        if (solutionIn.size() == endIn && sumIn == 0) {
+            res.push_back(solutionIn);
+            return;
+	}
         
-	      for (int i = startIn; i <= 9; ++i) {
-		        solutionIn.push_back(i);
-		        helper(sumIn - i, endIn, i + 1, solutionIn, res);
-		        solutionIn.pop_back();
-	      }
+	for (int i = startIn; i <= 9; ++i) {
+	    solutionIn.push_back(i);
+	    helper(sumIn - i, endIn, i + 1, solutionIn, res);
+	    solutionIn.pop_back();
+	}
     }
 };
