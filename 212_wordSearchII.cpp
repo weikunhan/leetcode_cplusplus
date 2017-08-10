@@ -78,7 +78,5 @@ private:
         }
         
         boardIn[stepIn1][stepIn2] = tmp;
-        
-        return;
     }
 };
