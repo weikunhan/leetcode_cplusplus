@@ -46,7 +46,5 @@ private:
         if (stepIn2 > 0) {
             helper(stepIn1, stepIn2 - 1, grid);
         }
-        
-        return;
     }
 };
