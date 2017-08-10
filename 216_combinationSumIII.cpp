@@ -9,12 +9,12 @@
 class Solution {
 public:
     vector<vector<int>> combinationSum3(int k, int n) {
-    vector<vector<int>> res;
-    vector<int> solution;
+    	vector<vector<int>> res;
+    	vector<int> solution;
     
-    helper(n, k, 1, solution, res);
+    	helper(n, k, 1, solution, res);
     
-    return res;
+    	return res;
 }
 
 private:
