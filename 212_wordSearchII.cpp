@@ -17,7 +17,7 @@ public:
     TrieNode* buildTrie(vector<string> wordIn) {
         TrieNode* root = new TrieNode();
         
-        for (int i = 0; i <wordIn.size(); ++i) {
+        for (int i = 0; i < wordIn.size(); ++i) {
             TrieNode* tmp = root;
             for (int j = 0; j < wordIn[i].size(); ++j) {
                 if (!tmp->child[wordIn[i][j] - 'a']) {
