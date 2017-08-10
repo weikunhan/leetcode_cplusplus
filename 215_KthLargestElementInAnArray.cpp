@@ -9,13 +9,13 @@
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
-        priority_queue<int> pq(nums.begin(), nums.end());
+        priority_queue<int> tables(nums.begin(), nums.end());
         int res = 0;
         
-        for (int i = 0; i < k - 1; i++) {
-            pq.pop(); 
+        for (int i = 0; i < k - 1; ++i) {
+            tables.pop(); 
         }
         
-        return res = pq.top();
+        return res = tables.top();
     }
 };
