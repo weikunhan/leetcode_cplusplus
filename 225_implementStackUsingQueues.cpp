@@ -13,34 +13,34 @@ public:
     
     /** Push element x onto stack. */
     void push(int x) {
-        q.push(x);
+        tables.push(x);
 
-	for (int i = 0; i < q.size() - 1; ++i) {
-	    q.push(q.front());
-	    q.pop();
+	for (int i = 0; i < tables.size() - 1; ++i) {
+	    tables.push(tables.front());
+	    tables.pop();
 	}
     }
     
     /** Removes the element on top of the stack and returns that element. */
     int pop() {
-        int tmp = q.front();
-        q.pop();
+        int tmp = tables.front();
+        tables.pop();
         
         return tmp;
     }
     
     /** Get the top element. */
     int top() {
-        return q.front();
+        return tables.front();
     }
     
     /** Returns whether the stack is empty. */
     bool empty() {
-        return q.empty();
+        return tables.empty();
     }
     
 private:
-    queue<int> q;
+    queue<int> tables;
 };
 
 /**
