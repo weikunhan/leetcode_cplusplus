@@ -12,6 +12,9 @@ public:
         vector<TrieNode *> child;
         string word;
         TrieNode():word(""), child(26, NULL) {}
+        ~TrieNode() {
+           child.clear();
+        }
     };
     
     TrieNode* buildTrie(vector<string> wordIn) {
