@@ -9,15 +9,14 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int number = 2;
-        vector<vector<int>> profit(number + 1, vector<int>(prices.size()));
+        vector<vector<int>> profit(3, vector<int>(prices.size()));
         int res = 0;
         
         if (prices.size() <= 1) {
             return res;
         }
 
-        for (int i = 1; i <= number; ++i) {
+        for (int i = 1; i <= 2; ++i) {
             int tmpMax = profit[i - 1][0] - prices[0];
             for (int j = 1; j < prices.size(); ++j) {
                 profit[i][j] = max(profit[i][j - 1], prices[j] + tmpMax);
