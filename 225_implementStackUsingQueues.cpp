@@ -14,11 +14,11 @@ public:
     /** Push element x onto stack. */
     void push(int x) {
         tables.push(x);
-
-	for (int i = 0; i < tables.size() - 1; ++i) {
+	    
+        for (int i = 0; i < tables.size() - 1; ++i) {
 	    tables.push(tables.front());
 	    tables.pop();
-	}
+        }
     }
     
     /** Removes the element on top of the stack and returns that element. */
