@@ -1,7 +1,7 @@
 //==============================================================================
 // 226. Invert Binary Tree
 // C++
-// Tag: Tree(without Binary Search)
+// Tag: Tree
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/invert-binary-tree/description/
