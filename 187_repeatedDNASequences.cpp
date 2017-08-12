@@ -1,7 +1,7 @@
 //==============================================================================
 // 187. Repeated DNA Sequences
 // C++
-// Tag: Bit Manipulation(Hash table)
+// Tag: without Bit Manipulation(Hash table)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/repeated-dna-sequences/description/
