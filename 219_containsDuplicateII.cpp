@@ -16,7 +16,7 @@ public:
             if (tables.find(nums[i]) == tables.end()) {
                 tables[nums[i]] = i;
             } else { 
-                if (i - tables[nums[i]] <=k) {
+                if (i - tables[nums[i]] <= k) {
                     return res = true;
                 }
                 tables[nums[i]] = i;
