@@ -26,9 +26,9 @@ public:
             
         if (leftHigh == rightHigh) { 
             return res = pow(2, leftHigh) - 1;  
+        } else {
+            return res = countNodes(root->left) + countNodes(root->right) + 1;
         }
-        
-        return res = countNodes(root->left) + countNodes(root->right) + 1;
     }
 
 private:
