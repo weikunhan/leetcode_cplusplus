@@ -1,7 +1,7 @@
 //==============================================================================
 // 222. Count Complete Tree Nodes
 // C++
-// Tag: Tree(without Binary Search)
+// Tag: Tree(Binary Search)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/count-complete-tree-nodes/description/
