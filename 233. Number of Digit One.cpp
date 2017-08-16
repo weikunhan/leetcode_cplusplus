@@ -26,7 +26,7 @@ public:
             }
     	    res += digit * factor + amount;
     	    factor *= 10;
-    	    tmp /=10;
+    	    tmp /= 10;
         }
         
         return res;
