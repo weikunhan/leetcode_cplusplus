@@ -10,4 +10,4 @@
 
 SELECT data1.Id FROM Weather data1, Weather data2
 WHERE data1.Temperature > data2.Temperature 
-AND TO_DAYS(data1.DATE) - TO_DAYS(data2.DATE) = 1;
+AND TO_DAYS(data1.Date) - TO_DAYS(data2.Date) = 1;
