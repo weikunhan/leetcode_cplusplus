@@ -8,5 +8,5 @@
 
 # Write your MySQL query statement below
 
-SELECT Name AS Customers FROM Customers
-WHERE Id NOT IN (SELECT CustomerId FROM Orders);
+SELECT data1.Name AS Customers FROM Customers data1
+WHERE data1.Id NOT IN (SELECT data2.CustomerId FROM Orders data2);
