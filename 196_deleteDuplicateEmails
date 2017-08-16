@@ -10,4 +10,4 @@
 
 DELETE data1 FROM Person data1, Person data2
 WHERE data1.Email = data2.Email 
-AND data1.Id > data2.Id
+AND data1.Id > data2.Id;
