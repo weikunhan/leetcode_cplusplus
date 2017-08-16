@@ -24,7 +24,7 @@ public:
             } else {
                 amount = n % factor + 1;
             }
-    	    res += digit *factor + amount;
+    	    res += digit * factor + amount;
     	    factor *= 10;
     	    tmp /=10;
         }
