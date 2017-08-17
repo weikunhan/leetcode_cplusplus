@@ -9,4 +9,5 @@
 # Write your MySQL query statement below
 
 SELECT data1.Email FROM Person data1 
-GROUP BY data1.Email HAVING COUNT(data1.Email) > 1;
+GROUP BY data1.Email 
+HAVING COUNT(data1.Email) > 1;
