@@ -9,7 +9,7 @@
 # Write your MySQL query statement below
 
 SELECT data1.Name AS Department, data2.Name AS Employee, data2.Salary FROM Employee data2
-JOIN Department data1 
+INNER JOIN Department data1 
 ON data2.DepartmentId = data1.Id
 WHERE (data2.DepartmentId, data2.Salary) 
 IN (SELECT data3.DepartmentId, MAX(data3.salary) FROM Employee data3 GROUP BY data3.DepartmentId)
