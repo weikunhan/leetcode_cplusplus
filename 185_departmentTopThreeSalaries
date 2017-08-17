@@ -1,0 +1,16 @@
+//==============================================================================
+// 185. Department Top Three Salaries
+// C++
+// Tag:
+//==============================================================================
+// Summary:
+// https://leetcode.com/problems/department-top-three-salaries/description/
+
+# Write your MySQL query statement below
+
+SELECT data1.Name AS Department, data2.Name AS Employee, data2.Salary
+FROM Department data1, Employee data2
+WHERE data2.DepartmentId = data1.Id 
+AND (SELECT COUNT(distinct(data3.Salary)) FROM Employee data3 WHERE data3.DepartmentId = data2.DepartmentId AND data3.Salary > data2.Salary) 
+IN (0, 1, 2)
+ORDER BY data2.DepartmentId, data2.Salary DESC;
