@@ -8,9 +8,11 @@
 
 # Write your MySQL query statement below
 
-SELECT data1.Name AS Department, data2.Name AS Employee, data2.Salary
-FROM Department data1, Employee data2
-WHERE data2.DepartmentId = data1.Id 
-AND (SELECT COUNT(DISTINCT(data3.Salary)) FROM Employee data3 WHERE data3.DepartmentId = data2.DepartmentId AND data3.Salary > data2.Salary) 
-IN (0, 1, 2)
-ORDER BY data2.DepartmentId, data2.Salary DESC;
+SELECT data1.Name AS Department, data2.Name AS Employee, data2.Salary FROM Employee data2
+INNER JOIN Employee data3 
+ON data3.DepartmentId = data2.DepartmentId
+INNER JOIN Department data1 
+ON data2.DepartmentId = data1.Id
+WHERE data2.Salary <= data3.Salary
+GROUP BY data2.Id
+HAVING COUNT(DISTINCT data3.Salary) < 4;
