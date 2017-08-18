@@ -10,4 +10,4 @@
 
 SELECT data1.NAME AS Employee FROM Employee data1, Employee data2
 WHERE data1.ManagerId = data2.Id 
-AND data1.Salary > data2.Salary
+AND data1.Salary > data2.Salary;
