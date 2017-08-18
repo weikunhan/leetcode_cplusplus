@@ -30,7 +30,7 @@ public:
     }
     
 private:
-    static bool helper(string &a, string &b) {
+    static bool helper(string a, string b) {
         return a + b > b + a;
     }
 };
