@@ -1,0 +1,15 @@
+//==============================================================================
+// 180. Consecutive Numbers
+// C++
+// Tag:
+//==============================================================================
+// Summary:
+// https://leetcode.com/problems/consecutive-numbers/description/
+
+# Write your MySQL query statement below
+
+SELECT DISTINCT(data1.Num) AS CONsecutiveNums FROM Logs data1, Logs data2, Logs data3 
+WHERE data1.Id = data2.Id - 1
+AND data2.Id = data3.Id - 1 
+AND data1.Num = data2.Num
+AND data2.Num = data3.Num
