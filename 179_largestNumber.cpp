@@ -26,7 +26,7 @@ public:
             res.erase(0, 1);
         }
         
-        return  res;
+        return res;
     }
     
 private:
