@@ -1,0 +1,12 @@
+//==============================================================================
+// 176. Second Highest Salary
+// C++
+// Tag:
+//==============================================================================
+// Summary:
+// https://leetcode.com/problems/second-highest-salary/description/
+
+# Write your MySQL query statement below
+
+SELECT MAX(data1.Salary) AS SecondHighestSalary FROM Employee data1 
+WHERE data1.Salary < (SELECT MAX(data2.Salary) FROM Employee data2);
