@@ -22,7 +22,7 @@ public:
             res += number[i];
         }
         
-        while (res[0] == '0' && res.length() > 1) {
+        while (res[0] == '0' && res.size() > 1) {
             res.erase(0, 1);
         }
         
