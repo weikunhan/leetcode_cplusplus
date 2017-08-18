@@ -1,0 +1,15 @@
+//==============================================================================
+// 178. Rank Scores
+// C++
+// Tag:
+//==============================================================================
+// Summary:
+// https://leetcode.com/problems/rank-scores/description/
+
+# Write your MySQL query statement below
+
+SELECT data1.Score, COUNT(DISTINCT data2.score) AS Rank FROM Scores data1
+INNER JOIN Scores data2 
+ON data1.Score <= data2.score
+GROUP BY data1.Id
+ORDER BY data1.Score DESC;
