@@ -1,7 +1,7 @@
 //==============================================================================
 // 216. Combination Sum III
 // C++
-// Tag: Array(Backtracking)
+// Tag: Array, Backtracking
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/combination-sum-iii/description/
