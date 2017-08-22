@@ -22,21 +22,15 @@ public:
         vector<int> res;
         stack<TreeNode *> tables;
         
-        if (!root) {
-            return res;
-        } else {
-            tables.push(root);
-        }
-        
-        while (!tables.empty()) {
-            TreeNode *tmp = tables.top();
-            res.push_back(tmp->val);
-            tables.pop();
-            if (tmp->right) {
-                tables.push(tmp->right);
-            }
-            if (tmp->left) {
-                tables.push(tmp->left);
+        while(!tables.empty() || root) {
+            if (root) {
+                tables.push(root);
+                res.push_back(root->val);
+                root = root->left;
+            } else {
+                TreeNode *tmp = tables.top();
+                tables.pop();
+                root = tmp->right;   
             }
         }
         
