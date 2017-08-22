@@ -23,7 +23,7 @@ public:
         stack<TreeNode *> tables;
         TreeNode *currentRoot = root;
         
-        while(!tables.empty() || current) {
+        while(!tables.empty() || currentRoot) {
             if (currentRoot) {
                 tables.push(currentRoot);
                 res.push_back(currentRoot->val);
@@ -38,3 +38,4 @@ public:
         return res;
     }
 };
+
