@@ -1,7 +1,7 @@
 //==============================================================================
 // 94. Binary Tree Inorder Traversal
 // C++
-// Tag: Stack, without Hash Table
+// Tag: Tree(Stack, without Hash Table)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/binary-tree-inorder-traversal/#/description
@@ -20,18 +20,18 @@ class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
         vector<int> res;
-        stack<TreeNode *> nodes;
-        TreeNode *current = root;
+        stack<TreeNode *> tables;
+        TreeNode *currentRoot = root;
         
-        while (!nodes.empty() || current) {
-            if (current) {
-                nodes.push(current);
-                current = current->left;
+        while (!tables.empty() || currentRoot) {
+            if (currentRoot) {
+                tables.push(currentRoot);
+                currentRoot = currentRoot->left;
             } else {
-                TreeNode *currentNode = nodes.top();
-                res.push_back(currentNode->val);
-                nodes.pop();
-                current = currentNode->right;
+                TreeNode *tmp = tables.top();
+                res.push_back(tmp->val);
+                tables.pop();
+                currentRoot = tmp->right;
             }
         }
         
