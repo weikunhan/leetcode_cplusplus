@@ -27,8 +27,8 @@ public:
         }
  
         while (right->next && right->next->next) {
-            right = right->next->next;
             left = left->next;
+            right = right->next->next;
             if (left == right) {
                 return res = true;
             }
