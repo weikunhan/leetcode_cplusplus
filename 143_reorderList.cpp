@@ -27,7 +27,7 @@ public:
         ListNode *midNode = helper(currentNode);
         midNode->next = helper2(midNode->next);
         
-        while (currentNode->next != NULL && currentNode->next->next != NULL) {
+        while (currentNode->next && currentNode->next->next) {
             ListNode *tmp = currentNode->next;
             currentNode->next = midNode->next;
             midNode->next = currentNode->next->next;  
