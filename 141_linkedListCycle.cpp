@@ -18,15 +18,14 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
+        ListNode *left = head;
+        ListNode *right = head;
         bool res = false;
         
         if (!head || !head->next) {
             return res;
         }
  
-        ListNode *left = head;
-        ListNode *right = head;
-        
         while (right->next && right->next->next) {
             right = right->next->next;
             left = left->next;
