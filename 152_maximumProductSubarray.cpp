@@ -23,14 +23,14 @@ public:
         }
         
         for (int i = 1; i < nums.size(); ++i) {
-	          if (nums[i] > 0) {
-		            maxProduct = max(maxProduct * nums[i], nums[i]);
-		            minProdect = min(minProdect * nums[i], nums[i]);
+	        if (nums[i] > 0) {
+		        maxProduct = max(maxProduct * nums[i], nums[i]);
+		        minProdect = min(minProdect * nums[i], nums[i]);
             } else {
                 int lastMax = maxProduct;
                 maxProduct = max(minProdect * nums[i], nums[i]);
                 minProdect = min(lastMax * nums[i], nums[i]);			   		
-	          }
+	        }
             res = max(res, maxProduct);
         }
         
