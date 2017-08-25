@@ -12,10 +12,10 @@ public:
         stack<int> tables;
         int res = 0;
         
-		for (int i = 0; i < tokens.size(); ++i) {
+        for (int i = 0; i < tokens.size(); ++i) {
             int number1 = 0;
             int number2 = 0;
-			if (tokens[i] == "+") {
+	    if (tokens[i] == "+") {
                 number1 = tables.top();
                 tables.pop();
                 number2 = tables.top();
