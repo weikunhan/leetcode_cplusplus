@@ -9,8 +9,8 @@
 class Solution {
 public:
     void reverseWords(string &s) {
-        reverse(s.begin(), s.end());
         int storeIndex = 0;
+        reverse(s.begin(), s.end());
         
         for (int i = 0; i < s.size(); ++i) {
             if (!isspace(s[i])) {
