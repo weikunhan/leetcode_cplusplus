@@ -24,7 +24,7 @@ public:
             return;
         }
         
-        ListNode *midNode = helper(currentNode);
+        ListNode *midNode = helper1(currentNode);
         midNode->next = helper2(midNode->next);
         
         while (currentNode->next && currentNode->next->next) {
@@ -37,7 +37,7 @@ public:
     }
         
 private: 
-    ListNode *helper(ListNode *nodeIn) {
+    ListNode *helper1(ListNode *nodeIn) {
         ListNode *left = nodeIn;
         ListNode *right = nodeIn->next;
         
