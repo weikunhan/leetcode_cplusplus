@@ -14,7 +14,7 @@ public:
         res[0] = true;
         
         for (int i = 1; i <= s.size(); ++i) {
-            for (int j = i - 1; j >= 0; --j) {
+            for (int j = 0; j <s.size(); ++j) {
                 if (res[j]) {
                     string word = s.substr(j, i - j);
                     for (int k = 0; k < wordDict.size(); ++k) {
