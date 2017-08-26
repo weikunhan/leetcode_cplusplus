@@ -24,7 +24,7 @@ public:
             return currentNode;
         }
         
-        ListNode *midNode = helper(currentNode);
+        ListNode *midNode = helper1(currentNode);
         ListNode *midNode2 = midNode->next;
         midNode->next = NULL;
         ListNode *half1 = sortList(currentNode);
@@ -34,7 +34,7 @@ public:
   }
     
 private: 
-    ListNode *helper(ListNode *nodeIn) {
+    ListNode *helper1(ListNode *nodeIn) {
         ListNode *left = nodeIn;
         ListNode *right = nodeIn->next;
         
