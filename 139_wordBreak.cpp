@@ -13,8 +13,8 @@ public:
         vector<bool> res(n + 1, false);
         res[0] = true;
         
-        for (int i = 1; i <= s.size(); ++i) {
-            for (int j = 0; j <s.size(); ++j) {
+        for (int i = 1; i <= n; ++i) {
+            for (int j = 0; j < n; ++j) {
                 if (res[j]) {
                     string word = s.substr(j, i - j);
                     for (int k = 0; k < wordDict.size(); ++k) {
