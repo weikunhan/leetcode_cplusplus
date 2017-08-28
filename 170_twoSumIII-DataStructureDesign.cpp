@@ -20,7 +20,10 @@ public:
     bool find(int value) {
         for (auto n:tables) {
             int tmp = value - n.first;
-            if (tables.find(tmp) != tables.end() && (n.first != tmp || n.second > 1)) {
+            if (n.first == tmp && n.second > 1) {
+                return true;    
+            }
+            if (n.first != tmp && tables.find(tmp) != tables.end()) {
                 return true;
             }
         }
