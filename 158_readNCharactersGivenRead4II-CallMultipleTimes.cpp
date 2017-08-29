@@ -18,7 +18,6 @@ public:
      */
     int read(char *buf, int n) {
         int res = 0;
-
         
         while (res < n) {
             if (index >= tmp) {
