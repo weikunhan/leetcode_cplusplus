@@ -19,16 +19,18 @@ public:
     int read(char *buf, int n) {
         char bufTmp[4];
         int res = 0;
+        int tmp = 0;
+        int index = 0;
         
         while (res < n) {
-            int index = 0;
-            int tmp = read4(bufTmp);
-            while (res < n && index < tmp) {     
-                buf[res++] = bufTmp[index++];     
+            if (index >= tmp) {
+                index = 0;
+                tmp = read4(bufTmp);
+                if (tmp == 0) {
+                    break;
+                }
             }
-            if (tmp < 4) {
-                break;
-            }
+            buf[res++] = bufTmp[index++];
         }        
         
         return res;
