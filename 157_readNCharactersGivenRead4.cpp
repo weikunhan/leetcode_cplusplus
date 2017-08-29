@@ -17,14 +17,19 @@ public:
      * @return    The number of characters read
      */
     int read(char *buf, int n) {
+        char bufTmp[4];
         int res = 0;
         
-        while (n > 0) {
-            int tmp = min(read4(buf), n);
-            res += tmp;
-            buf += tmp;
-            n -= 4;
-        }
+        while (res < n) {
+            int index = 0;
+            int tmp = read4(bufTmp);
+            while (res < n && index < tmp) {     
+                buf[res++] = bufTmp[index++];     
+            }
+            if (tmp < 4) {
+                break;
+            }
+        }        
         
         return res;
     }
