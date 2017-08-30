@@ -18,12 +18,8 @@
 
 class Solution {
 public:      
-    int kthSmallest(TreeNode* root, int k) {  
+    int kthSmallest(TreeNode* root, int k) { 
         int res = 0;
-        
-        if (!root) { 
-            return res;
-        }
         
         int leftSize = helper(root->left);  
         
@@ -31,7 +27,7 @@ public:
             return res = root->val;  
         } else if (leftSize >= k) {  
             return res = kthSmallest(root->left, k);  
-        } else {  
+        } else {
             return res = kthSmallest(root->right, k - leftSize - 1);  
         }
     }
