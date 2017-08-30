@@ -30,13 +30,13 @@ private:
             return rootIn;
         }
         
-        TreeNode *left = helper(rootIn->left, minIn, maxIn);
-        TreeNode *right = helper(rootIn->right, minIn, maxIn);
+        TreeNode *leftRoot = helper(rootIn->left, minIn, maxIn);
+        TreeNode *rightRoot = helper(rootIn->right, minIn, maxIn);
         
-        if (!left) {
-            return right;
-        } else if (!right) {
-            return left;
+        if (!leftRoot) {
+            return rightRoot;
+        } else if (!rightRoot) {
+            return leftRoot;
         } else {
             return rootIn;
         }
