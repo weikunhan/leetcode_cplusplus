@@ -30,10 +30,10 @@ private:
             return NULL;
         }
         
-        TreeNode *left = rootIn->left;
-        TreeNode *right = rootIn->right;
-        rootIn->left = helper(right);
-        rootIn->right = helper(left);
+        TreeNode *leftRoot = rootIn->left;
+        TreeNode *rightRoot = rootIn->right;
+        rootIn->left = helper(rightRoot);
+        rootIn->right = helper(leftRoot);
         
         return rootIn;
     }
