@@ -1,7 +1,7 @@
 //==============================================================================
 // 242. Valid Anagram
 // C++
-// Tag: String(Hash Tables)
+// Tag: String(Hash Table)
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/different-ways-to-add-parentheses/description/
