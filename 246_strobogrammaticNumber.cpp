@@ -19,7 +19,8 @@ public:
         int right = num.size() - 1;
         
         while (left <= right) {
-            if (tables.find(num[left]) == tables.end() || tables[num[left]] != num[right]) {
+            if (tables.find(num[left]) == tables.end() || 
+                tables[num[left]] != num[right]) {
                 return res; 
             }
             ++left;
