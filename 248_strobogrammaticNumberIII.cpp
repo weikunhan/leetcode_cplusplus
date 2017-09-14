@@ -17,16 +17,16 @@ public:
             solution.insert(solution.end(), tmp.begin(), tmp.end());
         }
 
-		for (int i = 0; i < solution.size(); ++i) {
+	for (int i = 0; i < solution.size(); ++i) {
             if ((solution[i].size() == low.size() && solution[i].compare(low) < 0 ) || 
                 (solution[i].size() == high.size() && solution[i].compare(high) > 0)) {
-			    continue;
+	        continue;
             }
             ++res;
         }
         
-		return res;
-  }
+	return res;
+    }
     
 private:
     vector<string> helper(int stepIn, int startIn) {
