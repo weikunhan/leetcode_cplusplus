@@ -12,7 +12,7 @@ public:
         int res = 0;
         sort(nums.begin(), nums.end());
         
-        if (nums.size() < 1) {
+        if (nums.size() < 2) {
             return res;
         }
     
