@@ -15,7 +15,7 @@ public:
             return res;
         }
         
-        for (int i = 2; i < 6; i++) {
+        for (int i = 2; i < 6; ++i) {
             while (num % i == 0) {
                 num /= i;
             }
