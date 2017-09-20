@@ -1,0 +1,15 @@
+//==============================================================================
+// 262. Trips and Users
+// C++
+// Tag:
+//==============================================================================
+// Summary:
+// https://leetcode.com/problems/trips-and-users/description/
+
+# Write your MySQL query statement below
+
+SELECT data1.Request_at AS Day, ROUND(COUNT(IF(data1.Status != 'completed', TRUE, NULL)) / COUNT(*), 2) AS 'Cancellation Rate' FROM Trips data1
+WHERE (data1.Request_at BETWEEN '2013-10-01' AND '2013-10-03')
+AND data1.Client_id 
+NOT IN (SELECT data2.Users_Id FROM Users data2 WHERE data2.Banned = 'Yes')
+GROUP BY data1.Request_at;
