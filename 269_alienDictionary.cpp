@@ -28,7 +28,7 @@ public:
             int index = 0;
             int length1 = words[i - 1].size();
             int length2 = words[i].size();
-            while (words[i-1][index] == words[i][index]) {
+            while (words[i - 1][index] == words[i][index]) {
                 ++index;
             }
             if (index >= min(length1, length2)) {
