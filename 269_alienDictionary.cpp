@@ -26,14 +26,12 @@ public:
         
         for (int i = 1; i < words.size(); i++) {
             int index = 0;
-            int length1 = words[i - 1].size();
-            int length2 = words[i].size();
             while (words[i - 1][index] == words[i][index]) {
                 ++index;
             }
-            if (index >= min(length1, length2)) {
+            if (index >= min(words[i - 1].size(), words[i].size())) {
                 continue;
-            } 
+            }
             ++degree[words[i][index]];
             graph[words[i - 1][index]].insert(words[i][index]);  
         }
