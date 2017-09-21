@@ -35,7 +35,7 @@ public:
                 continue;
             } 
             ++degree[words[i][index]];
-            graph[words[i-1][index]].insert(words[i][index]);  
+            graph[words[i - 1][index]].insert(words[i][index]);  
         }
 
         for (int i = 0; i < degree.size(); ++i) {
