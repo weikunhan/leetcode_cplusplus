@@ -13,7 +13,7 @@ public:
         sort(citations.begin(), citations.end());
         
         if (citations.empty()) {
-            return 0;
+            return res;
         }
 
         for (int i = citations.size() - 1; i >= 0; --i) {
