@@ -20,9 +20,9 @@ public:
         }
 
         for (int i = 2; i < n; ++i) {
-            int temp = diffColorCount;
+            int tmp = diffColorCount;
             diffColorCount = (diffColorCount + sameColorCount) * (k - 1);
-            sameColorCount = temp;
+            sameColorCount = tmp;
         }
         
         return res = diffColorCount + sameColorCount;
