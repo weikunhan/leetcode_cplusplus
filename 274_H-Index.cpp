@@ -18,7 +18,7 @@ public:
 
         for (int i = citations.size() - 1; i >= 0; --i) {
             int tmp = citations.size() - i;
-            if (citations[i] >= tmp && tmp > res) {
+            if (citations[i] >= tmp) {
                 res = tmp;
             } else {
                 break;
