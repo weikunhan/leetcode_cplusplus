@@ -18,7 +18,7 @@ public:
 
         while (num > 0) {
             if (num % 1000 != 0) {
-    	        res = helper(num % 1000) + thousands[index] + " " + res;
+    	        res = helper(num % 1000) + greatThan1000[index] + " " + res;
             }
     	    num /= 1000;
     	    ++index;
@@ -29,8 +29,8 @@ public:
 
 private:
     vector<string> lessThan20 = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
-    vector<string> tens = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
-    vector<string> thousands = {"", "Thousand", "Million", "Billion"};
+    vector<string> lessThan100 = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+    vector<string> greatThan1000 = {"", "Thousand", "Million", "Billion"};
     
     string helper(int numberIn) {
         if (numberIn == 0) {
@@ -38,7 +38,7 @@ private:
         } else if (numberIn < 20) {
             return lessThan20[numberIn] + " ";
         } else if (numberIn < 100) {
-            return tens[numberIn / 10] + " " + helper(numberIn % 10);
+            return lessThan100[numberIn / 10] + " " + helper(numberIn % 10);
         } else {
             return lessThan20[numberIn / 100] + " Hundred " + helper(numberIn % 100);
         }
