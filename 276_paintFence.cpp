@@ -16,7 +16,7 @@ public:
         if (n == 0) {
             return res;
         } else if (n == 1) {
-            return k;
+            return res = k;
         }
 
         for (int i = 2; i < n; ++i) {
