@@ -15,7 +15,7 @@ public:
         int factor5 = 0;
 
         if(n <= 0) {
-            return 0;
+            return res[0];
         } else {
              res = vector<int> (n, 0);
         }
