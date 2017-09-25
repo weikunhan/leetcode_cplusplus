@@ -23,6 +23,7 @@ private:
         if (stepIn1 < 0 || stepIn1 >= rooms.size() || stepIn2 < 0 || stepIn2 >= rooms[stepIn1].size() || rooms[stepIn1][stepIn2] < numberIn) {
             return;
         }
+        
         rooms[stepIn1][stepIn2] = numberIn;
         helper(stepIn1 + 1, stepIn2, numberIn + 1, rooms);
         helper(stepIn1 - 1, stepIn2, numberIn + 1, rooms);
