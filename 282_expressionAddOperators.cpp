@@ -17,8 +17,8 @@ public:
     }
     
 private:
-    void helper(string wordIn, int target, int stepIn, long numberIn1, long numberIn2, string solutionIn, vector<string>& res) {
-        if (stepIn == wordIn.size() && numberIn1 == target) {
+    void helper(string wordIn, int targetIn, int stepIn, long numberIn1, long numberIn2, string solutionIn, vector<string>& res) {
+        if (stepIn == wordIn.size() && numberIn1 == targetIn) {
             res.push_back(solutionIn);
             return;
         }
@@ -30,12 +30,12 @@ private:
             }
             long number = stol(tmp);
             if (stepIn == 0) {
-                helper(wordIn, target, i, number, number, tmp, res);
+                helper(wordIn, targetIn, i, number, number, tmp, res);
                 continue;
             }
-            helper(wordIn, target, stepIn + i, numberIn1 + number, number, solutionIn + "+" + tmp, res);
-            helper(wordIn, target, stepIn + i, numberIn1 - number, -number, solutionIn + "-" + tmp, res);
-            helper(wordIn, target, stepIn + i, numberIn1 - numberIn2 + numberIn2 * number, numberIn2 * number, solutionIn + "*" + tmp, res);
+            helper(wordIn, targetIn, stepIn + i, numberIn1 + number, number, solutionIn + "+" + tmp, res);
+            helper(wordIn, targetIn, stepIn + i, numberIn1 - number, -number, solutionIn + "-" + tmp, res);
+            helper(wordIn, targetIn, stepIn + i, numberIn1 - numberIn2 + numberIn2 * number, numberIn2 * number, solutionIn + "*" + tmp, res);
         }
     }
 };
