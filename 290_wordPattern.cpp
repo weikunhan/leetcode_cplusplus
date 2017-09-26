@@ -14,9 +14,12 @@ public:
         stringstream ss(str);
         string tmp;
         int index = 0;
-        bool res = false; 
+        bool res = false;
         
-        while (getline(ss, tmp, ' ') && index <= pattern.size()) {
+        while (getline(ss, tmp, ' ')) {
+            if (index == pattern.size()) {
+                return res;
+            }
             if (tables1.find(pattern[index]) != tables1.end() && tables1[pattern[index]] != tmp) {
                 return res;
             }
