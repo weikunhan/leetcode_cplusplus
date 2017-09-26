@@ -17,9 +17,9 @@ public:
     }
     
     bool isUnique(string word) {
-		string tmp = word.front() + to_string(word.size() - 2) + word.back();
+        string tmp = word.front() + to_string(word.size() - 2) + word.back();
         
-		return tables[tmp].count(word) == tables[tmp].size(); 
+	return tables[tmp].count(word) == tables[tmp].size(); 
     }
     
 private:
