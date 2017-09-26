@@ -39,13 +39,13 @@ private:
             if (tables2.find(tmp) != tables2.end()) {
                 continue;
             }
-            tables2.insert(tmp);
             tables1[wordIn2[stepIn2]] = tmp;
+            tables2.insert(tmp);
             if (helper(wordIn1, i + 1, wordIn2, stepIn2 + 1, tables1, tables2)) {
                 return true;
             }
-            tables2.erase(tmp);
             tables1.erase(wordIn2[stepIn2]);
+            tables2.erase(tmp);
         }
         
         return false;
