@@ -12,7 +12,7 @@ public:
     MedianFinder() {}
     
     void addNum(int num) {
-	    tables2.push(-num);
+        tables2.push(-num);
         tables1.push(-tables2.top()); 
         tables2.pop();
         
@@ -23,11 +23,11 @@ public:
     }
     
     double findMedian() {
-		if (tables1.size() < tables2.size()) {
-			return -tables2.top();
-		} else {
-			return (tables1.top() - tables2.top()) / 2.0;
-		}
+        if (tables1.size() < tables2.size()) {
+            return -tables2.top();
+        } else {
+            return (tables1.top() - tables2.top()) / 2.0;
+        }
     }
 
 private:
