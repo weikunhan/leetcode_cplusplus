@@ -1,7 +1,7 @@
 //==============================================================================
 // 291. Word Pattern II
 // C++
-// Tag: String(Backtracking)
+// Tag: Backtracking
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/word-pattern-ii/description/
