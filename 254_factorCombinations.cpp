@@ -22,14 +22,14 @@ private:
         int tmp = (solutionIn.empty()) ? 2:solutionIn.back();
         
         while (tmp <= numberIn / tmp){
-                if (numberIn % tmp == 0) {
-                    solutionIn.push_back(tmp);
-                    solutionIn.push_back(numberIn / tmp);
-                    res.push_back(solutionIn);
-                    solutionIn.pop_back();
-                    helper(numberIn / tmp, solutionIn, res);
-                    solutionIn.pop_back();
-                }
+            if (numberIn % tmp == 0) {
+                solutionIn.push_back(tmp);
+                solutionIn.push_back(numberIn / tmp);
+                res.push_back(solutionIn);
+                solutionIn.pop_back();
+                helper(numberIn / tmp, solutionIn, res);
+                solutionIn.pop_back();
+            }
             ++tmp;
         }
     }
