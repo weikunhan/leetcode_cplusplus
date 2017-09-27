@@ -52,7 +52,6 @@ private:
         
         if (tmp == "#") {
             return NULL;
-        
         }
         
         TreeNode *root = new TreeNode(stoi(tmp));
