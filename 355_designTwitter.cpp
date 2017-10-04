@@ -2,6 +2,7 @@
 // 355. Design Twitter
 // C++
 // Tag: Design(Hash Table, Heap)
+// Company: Amazon
 //==============================================================================
 // Summary:
 // https://leetcode.com/problems/design-twitter/description/
