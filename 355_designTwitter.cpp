@@ -26,7 +26,6 @@ public:
         vector<int> tmp;
         int step = 10;
 
-
         for (int i = 0; i < mine.size(); ++i) {
             tables3.push(mine[i]);
         }
