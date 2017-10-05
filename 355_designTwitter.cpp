@@ -14,7 +14,7 @@ public:
     
     /** Compose a new tweet. */
     void postTweet(int userId, int tweetId) {
-        shared_ptr<tweet> newsFeed(new tweet(tweetId, time++));
+        shared_ptr<tweet> newsFeed = make_shared<tweet>(tweetId, time++);
         tables1[userId].push_back(newsFeed);
     }
     
