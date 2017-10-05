@@ -22,7 +22,6 @@ public:
     std::vector<int> getNewsFeed(int userId) {
         priority_queue<shared_ptr<tweet>, vector<shared_ptr<tweet>>, helper> tables3;
         vector<shared_ptr<tweet>> mine = tables1[userId];
-        unordered_set<int> followMe = tables2[userId];
         vector<int> tmp;
         int step = 10;
 
@@ -30,7 +29,7 @@ public:
             tables3.push(mine[i]);
         }
                 
-        for (auto n:followMe) {
+        for (auto n:tables2[userId]) {
             vector<shared_ptr<tweet>> notMine = tables1[n];
             for (int i = 0 ; i < notMine.size(); ++i) {
                 tables3.push(notMine[i]);
