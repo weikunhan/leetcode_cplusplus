@@ -37,6 +37,7 @@ public:
     }
     
     /** Get a random element from the set. */
+    /** Weikun Assume the vector is not empty */
     int getRandom() {
         return number[rand() % number.size()];
     }
