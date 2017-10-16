@@ -12,7 +12,7 @@ public:
         bool res = false;
         int left = 1;
         
-        while (left < s.size()) {
+        while (left <= s.size() / 2) {
             string element = s.substr(0, left);
             string tmp = element;
             while (element.size() < s.size()) {
