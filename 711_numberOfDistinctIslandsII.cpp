@@ -4,7 +4,7 @@
 // Tag: Array(Hash Table, DFS)
 //==============================================================================
 // Summary:
-// https://leetcode.com/problems/number-of-distinct-islands-ii/description/11
+// https://leetcode.com/problems/number-of-distinct-islands-ii/description/
 
 class Solution {
 public:
