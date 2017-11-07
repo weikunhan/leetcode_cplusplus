@@ -9,7 +9,7 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> numbers;
+        unordered_map<int, int> tables;
         vector<int> res;
         
         for (int i = 0; i < nums.size(); i++) {
@@ -18,7 +18,7 @@ public:
                 res.push_back(numbers[difference]);
                 res.push_back(i);
             }
-            numbers[nums[i]] = i;
+            tables[nums[i]] = i;
         }
         
         return res;
