@@ -14,7 +14,7 @@ public:
         
         for (int i = 0; i < nums.size(); i++) {
             int difference = target - nums[i];
-            if (numbers.find(difference) != numbers.end()) {
+            if (tables.find(difference) != tables.end()) {
                 res.push_back(tables[difference]);
                 res.push_back(i);
             }
