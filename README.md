@@ -12,6 +12,6 @@ For more problem details, please go to the LeetCode.
 
 -------------------------------------------------------------------------------
 
-All the code can run by C++. 
+All the code are wrote by C++. 
 
 -------------------------------------------------------------------------------
